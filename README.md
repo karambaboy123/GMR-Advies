@@ -4,39 +4,54 @@
   <h1>GMR Advies Dashboard</h1>
   <p><strong>Biobased en Circulaire Bouw — Groene Metropoolregio Arnhem-Nijmegen</strong></p>
   <p>
-    Interactief onderzoeksdashboard ontwikkeld in het kader van de Minor Duurzaam Ondernemen<br>
-    en Circulaire Economie aan de HAN Hogeschool Arnhem en Nijmegen.
+    Interactief onderzoeks- en adviesdashboard ontwikkeld in het kader van de<br>
+    Minor Duurzaam Ondernemen en Circulaire Economie aan de HAN Hogeschool Arnhem en Nijmegen.
   </p>
 
-  <img src="https://img.shields.io/badge/Vanilla%20JS-no%20build%20step-0E4447?style=flat-square" alt="Vanilla JS">
-  <img src="https://img.shields.io/badge/Interviews-7%20partijen-2A9298?style=flat-square" alt="Interviews">
-  <img src="https://img.shields.io/badge/Stakeholders-48%20partijen-176064?style=flat-square" alt="Stakeholders">
-  <img src="https://img.shields.io/badge/Bronnen-40%2B%20documenten-44b3ba?style=flat-square" alt="Bronnen">
+  <img src="https://img.shields.io/badge/Vanilla%20JS-geen%20build%20stap-0E4447?style=flat-square" alt="Vanilla JS">
+  <img src="https://img.shields.io/badge/Trends-12%20analyses-2A9298?style=flat-square" alt="Trends">
+  <img src="https://img.shields.io/badge/Stakeholders-50%20partijen-176064?style=flat-square" alt="Stakeholders">
+  <img src="https://img.shields.io/badge/Interviews-6%20partijen-44b3ba?style=flat-square" alt="Interviews">
+  <img src="https://img.shields.io/badge/Inzichten-Top%2010-E07B00?style=flat-square" alt="Inzichten">
 </div>
 
 ---
 
 ## Over dit project
 
-Dit dashboard biedt een gestructureerd overzicht van het onderzoek naar de transitie naar biobased en circulaire bouw in de Groene Metropoolregio Arnhem-Nijmegen (GMR). Het is ontwikkeld door Karam Rihmani en Berend op basis van zeven diepte-interviews met marktpartijen, overheden en kennisinstellingen in april 2026, aangevuld met analyse van meer dan veertig beleidsdocumenten en rapporten.
+Dit dashboard biedt een volledig interactief overzicht van het onderzoek naar de transitie naar biobased en circulaire bouw in de Groene Metropoolregio Arnhem-Nijmegen (GMR). Het is ontwikkeld door Karam Rihmani en Berend Dirken op basis van zes diepte-interviews met marktpartijen, overheden en woningcorporaties in april 2026, aangevuld met analyse van meer dan veertig beleidsdocumenten en rapporten.
 
-Het dashboard is bedoeld als adviesinstrument voor beleidsmakers, projectontwikkelaars en andere stakeholders die betrokken zijn bij de verduurzaming van de bouwsector in de regio.
+De centrale boodschap van het onderzoek:
+
+> *Er is al veel beleid, kennis en ambitie rondom biobased en circulair bouwen. De grootste uitdaging zit nu in de **implementatie**. Het advies is om bestaand beleid — zoals HNN en biobased criteria — structureel te verankeren in aanbestedingen, gebiedsontwikkeling en woningbouwprojecten.*
 
 ---
 
 ## Tabbladen
 
-### Stakeholders
-Overzicht van 48 relevante partijen in de GMR, onderverdeeld in zeven categorieen: gemeenten, provincie, bouwbedrijven, woningcorporaties, brancheorganisaties, kennisinstellingen en rijksoverheid. Geinterviewde partijen zijn apart gemarkeerd. Elke kaart toont de organisatie, rol en standpunt. Filterbaar op categorie en interviewstatus. Exporteerbaar als PDF.
+### 🏠 Home *(startpagina)*
+Overzichtspagina met projectintroductie, centrale boodschap, statistische samenvatting en klikbare navigatiekaarten naar alle secties. Geeft direct inzicht in de opzet en scope van het dashboard.
 
-### Trendanalyse
-Tien onderbouwde trends voor de biobased bouwtransitie, weergegeven als uitklapbare kaarten met beschrijving, statistieken, tijdlijn en bronnen. Een interactieve impactmatrix (impact x tijdshorizon) geeft een visueel overzicht. Klik op een punt in de matrix om direct naar de bijbehorende trend te springen. Exporteerbaar als PDF.
+### 📄 Adviesrapport
+Volledig strategisch adviesrapport op basis van het DOCX-bronbestand. Bevat negen secties: managementsamenvatting, aanleiding, onderzoeksbasis, vijf kernconclusies, trendtabel, vier knelpunten, zes strategische adviezen, implementatieroadmap 2026–2030, dashboard-aanbevelingen en conclusie. Exporteerbaar als PDF in GMR-huisstijl.
 
-### Notulen Explorer
-Interviewmatrix op basis van tien centrale onderzoeksvragen. Per vraag worden de citaten van geinterviewde partijen en de standpunten van niet-geinterviewde stakeholders naast elkaar getoond, inclusief sentimentanalyse (positief, neutraal, kritisch). Bronvermelding per standpunt. Exporteerbaar als PDF.
+### ⭐ Top 10 Inzichten
+De tien meest bepalende lessen voor de versnelling van biobased en circulaire bouw in de GMR. Elke inzichtkaart toont categorie, beschrijving, GMR-handelingsperspectief en actiepunt. Kleurgecodeerd per categorie (implementatie, beleid, financiën, regelgeving, samenwerking, innovatie, strategie).
 
-### Beleidsimulator
-Dynamische scenariosimulatie met vier speelbare rollen: wethouder duurzaamheid, provinciaal beleidsadviseur, duurzaamheidsmanager en directeur ontwikkeling. Per rol zijn vier beleidsrondes, elk met meerdere keuzemogelijkheden. Keuzes beinvloeden vier systeemvariabelen: politiek draagvlak, marktgroei, budgetruimte en samenwerking. Het eindscherm toont een radar-chart, prognoses voor 2030, het gevolgde beleidspad en een eindscenario. Exporteerbaar als PDF-rapport.
+### 📈 Trendanalyse
+Twaalf onderbouwde trends voor de biobased bouwtransitie, weergegeven als uitklapbare kaarten met beschrijving, statistieken, tijdlijn en bronnen. Een interactieve impactmatrix (impact × tijdshorizon) geeft een visueel overzicht. Klik op een punt in de matrix om direct naar de bijbehorende trend te springen. Exporteerbaar als PDF.
+
+### 👥 Stakeholders
+Overzicht van vijftig relevante partijen in de GMR, onderverdeeld in zeven categorieën: gemeenten, provincie, bouwbedrijven, woningcorporaties, brancheorganisaties, kennisinstellingen en rijksoverheid. Geïnterviewde partijen zijn apart gemarkeerd. Filterbaar op categorie en interviewstatus. Exporteerbaar als PDF.
+
+### 📋 Notulen Explorer
+Interviewmatrix op basis van centrale onderzoeksvragen. Per vraag worden de standpunten van geïnterviewde partijen naast elkaar getoond, inclusief sentimentanalyse (positief, neutraal, kritisch) en bronvermelding. Exporteerbaar als PDF.
+
+### 🎮 Beleidsscenario Simulator
+Dynamische scenariosimulatie met **vijf** speelbare rollen: gemeente, provincie, aannemer, woningcorporatie en **bouwboer/agrariër**. Per rol zijn vier beleidsrondes, elk met vier keuzemogelijkheden. Keuzes beïnvloeden vier verborgen systeemvariabelen: politiek draagvlak, marktgroei, budgetruimte en samenwerking. Het eindscherm toont een radar-chart, prognoses voor 2030, het beleidspad en een eindscenario. Stakeholderreacties zijn weergegeven als rollen (niet als namen). Exporteerbaar als PDF-rapport.
+
+### 📚 Deskresearch
+Bronnenanalyse, beleidsdocumenten en literatuuroverzicht waarop de trendanalyse en adviezen zijn gebaseerd.
 
 ---
 
@@ -44,43 +59,55 @@ Dynamische scenariosimulatie met vier speelbare rollen: wethouder duurzaamheid, 
 
 | Functie | Beschrijving |
 |---|---|
-| PDF-export | Alle vier tabbladen zijn exporteerbaar als gestructureerd PDF-document in GMR-huisstijl |
-| Radar-chart | Visuele eindstand van de vier systeemvariabelen na het spelen van de beleidsimulator |
-| Impactmatrix | Scatter-plot van trends op impact x tijdshorizon met click-to-scroll |
-| Bron-links | Directe koppeling naar interview-bestanden en externe websites |
-| Sentimentbadges | Kleurgecodeerde weergave van positief, neutraal en kritisch sentiment per antwoord |
+| PDF-export | Alle tabbladen exporteerbaar als gestructureerd PDF-document in GMR-huisstijl met officieel logo |
+| Adviesrapport PDF | Volledig rapport met alle 9 secties, tabellen en bronnenlijst |
+| Radar-chart | Visuele eindstand van de vier systeemvariabelen na de beleidsimulator |
+| Impactmatrix | Scatter-plot van trends op impact × tijdshorizon met click-to-scroll |
+| Beleidsimulator | 5 rollen, 4 rondes, verborgen effecten, netwerk-visualisatie, eindscenario |
+| Sentimentbadges | Kleurgecodeerde weergave van positief, neutraal en kritisch sentiment |
 | Lokale bestanden | Werkt volledig offline via het `file://` protocol, geen server vereist |
+| GitHub Pages | Direct bruikbaar als statische site zonder build-stap |
 
 ---
 
-## Geinterviewde partijen
+## Geïnterviewde partijen
 
-| Organisatie | Sector | Functie |
+| Organisatie | Sector | Rol |
 |---|---|---|
 | Gemeente Nijmegen | Overheid | Beleidsadviseur Duurzaamheid |
 | Provincie Gelderland | Overheid | Beleidsadviseur Ruimte en Wonen |
 | BAM Wonen | Bouwbedrijf | Projectleider Biobased Bouwen |
 | Van Wijnen | Bouwbedrijf | Directeur Duurzaamheid |
 | Klokgroep | Projectontwikkeling | Directeur Vastgoed |
-| Talis Woningcorporatie | Woningcorporatie | Beleidsadviseur Duurzaamheid en Vastgoed |
-| Van Wijnen (2e gesprek) | Bouwbedrijf | Aantekeningen veldsessie |
+| Talis Woningcorporatie | Woningcorporatie | Beleidsadviseur Duurzaamheid |
 
-Alle interviews zijn afgenomen in april 2026 in het kader van de minor Duurzaam Ondernemen en Circulaire Economie aan de HAN.
+Alle interviews zijn afgenomen in april 2026 in het kader van de Minor Duurzaam Ondernemen en Circulaire Economie aan de HAN.
 
 ---
 
-## Bronnen en documentatie
+## Bestandsstructuur
 
-De map `Biobased en Circulaire Bouw/` bevat de volledige documentatiebasis van het onderzoek, waaronder:
-
-- Het Nieuwe Normaal (HNN) leidraden voor nieuwbouw, bestaande bouw, infra en openbare ruimte
-- Nationale Aanpak Biobased Bouwen (NABB, 2023)
-- Rapportages van ING, TNO, Wageningen UR, Building Balance en Cirkelstad
-- Juridische toetsing van HNN-eisen in aanbestedingen
-- Circulaire Atlas Gelderland
-- DRIFT Rapport Staat van Transitie
-- EPBD en CSRD whitepapers
-- Trendanalyse onderbouwing (eigen onderzoek)
+```
+GMR Advies/
+├── index.html          # Hoofd HTML — navigatie en tab-containers
+├── app.js              # Tab routing en module-initialisatie
+├── styles.css          # Alle CSS — GMR-huisstijl en componenten
+├── data.js             # Centrale data: trends, stakeholders, game-rollen
+├── game-data.js        # Beleidsimulator data: rondes, enrichments, scenario's
+│
+├── home.js             # Tab: Startpagina / overzichtsdashboard
+├── adviesrapport.js    # Tab: Strategisch adviesrapport
+├── inzichten.js        # Tab: Top 10 inzichten
+├── trends.js           # Tab: Trendanalyse
+├── stakeholders.js     # Tab: Stakeholderoverzicht
+├── notulen.js          # Tab: Notulen Explorer
+├── game.js             # Tab: Beleidsscenario Simulator
+├── deskresearch.js     # Tab: Deskresearch
+│
+├── print-export.js     # PDF-export voor alle tabbladen
+├── logo.svg            # GMR-logo (teal) — gebruikt in sidebar
+└── logobestanden.svg   # GMR-logo (wit, horizontaal) — gebruikt in PDFs
+```
 
 ---
 
@@ -89,17 +116,34 @@ De map `Biobased en Circulaire Bouw/` bevat de volledige documentatiebasis van h
 | Component | Keuze | Reden |
 |---|---|---|
 | JavaScript | Vanilla JS (geen framework) | Werkt direct via `file://`, geen build-stap |
-| Iconen | Lucide Icons via CDN | Lichtgewicht, consistent, tree-shakeable |
-| PDF-export | `window.print()` + CSS | Geen externe afhankelijkheden, werkt offline |
+| Iconen | Lucide Icons via CDN | Lichtgewicht, consistent, SVG-gebaseerd |
+| PDF-export | `window.print()` + print CSS | Geen externe afhankelijkheden, werkt offline |
 | Grafieken | Inline SVG (handgeschreven) | Volledige controle, geen library vereist |
 | Stijl | CSS custom properties | GMR-huisstijl consequent door hele codebase |
+| Modules | IIFE-patroon per tab | Encapsulatie zonder build-tooling |
+
+---
+
+## Bronnen en documentatie
+
+De map `Biobased en Circulaire Bouw/` bevat de volledige documentatiebasis van het onderzoek, waaronder:
+
+- Het Nieuwe Normaal (HNN) — leidraden nieuwbouw, bestaande bouw, infra en juridische toetsing
+- Nationale Aanpak Biobased Bouwen (NABB, 2023)
+- Rapportages van ING, TNO, Wageningen UR, Building Balance en Cirkelstad
+- Circulaire Atlas Gelderland
+- DRIFT Rapport Staat van Transitie
+- EPBD en CSRD whitepapers
+- Woningconcepten en hun prestaties 2023/2024
+- Marktonderzoek Nederlandse carbon credits en Climate Cleanup Protocol
+- Trendanalyse onderbouwing (eigen onderzoek, april 2026)
 
 ---
 
 ## Auteurs
 
-**Karam Rihmani** en **Berend**
-Minor Duurzaam Ondernemen en Circulaire Economie
+**Karam Rihmani** en **Berend Dirken**  
+Minor Duurzaam Ondernemen en Circulaire Economie  
 HAN Hogeschool Arnhem en Nijmegen, 2026
 
 Onderzoek uitgevoerd in opdracht van de Groene Metropoolregio Arnhem-Nijmegen.
