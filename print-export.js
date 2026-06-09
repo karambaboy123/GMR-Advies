@@ -74,8 +74,7 @@ window.GMRPrint = (() => {
       }
       .prt-logo { display: flex; align-items: center; gap: 12px; }
       .prt-logo-img {
-        height: 44px; width: auto;
-        filter: brightness(0) invert(1);
+        height: 48px; width: auto;
       }
       .prt-logo-text { display: flex; flex-direction: column; }
       .prt-logo-title { font-size: 13px; font-weight: 700; color: #fff; }
@@ -319,6 +318,30 @@ window.GMRPrint = (() => {
       .prt-roadmap-jaar.arm-goal { background: #176064; }
       .prt-roadmap-titel { font-size: 12px; font-weight: 700; color: #0E4447; margin-bottom: 4px; }
       .prt-roadmap-punten { font-size: 11px; color: #3D8288; line-height: 1.6; padding-left: 12px; }
+
+      /* ── ADVIESRAPPORT BODY TEXT ────────────────────────── */
+      .prt-advies-body { padding: 2px 0 4px 0; }
+      .prt-p {
+        font-size: 11.5px; line-height: 1.65; color: #1a4a4e;
+        margin: 0 0 9px 0;
+      }
+      .prt-p:last-child { margin-bottom: 0; }
+      .prt-h3 {
+        font-size: 12px; font-weight: 700; color: #0E4447;
+        margin: 14px 0 5px 0;
+      }
+      .prt-ul {
+        margin: 6px 0 8px 1em; padding: 0; list-style: none;
+      }
+      .prt-ul li {
+        font-size: 11.5px; line-height: 1.6; color: #1a4a4e;
+        padding: 2px 0 2px 0;
+        border-bottom: 1px solid #edf4f4;
+      }
+      .prt-ul li::before {
+        content: "→ "; color: #2A9298; font-weight: 700;
+      }
+      .prt-trend-table thead th:nth-child(3) { color: #b6ecef; }
 
       /* ── FOOTER ─────────────────────────────────────────── */
       .prt-footer {
@@ -606,122 +629,169 @@ window.GMRPrint = (() => {
   }
 
   // ----------------------------------------------------------
-  // PRINT: ADVIESRAPPORT
+  // PRINT: ADVIESRAPPORT — volledige inhoud conform DOCX
   // ----------------------------------------------------------
   function printAdviesrapport() {
 
-    const FINDINGS = [
+    // ── helpers ─────────────────────────────────────────────
+    function sectionTitle(t) {
+      return `<div class="prt-advies-section-title">${t}</div>`;
+    }
+    function body(html) {
+      return `<div class="prt-advies-body">${html}</div>`;
+    }
+    function p(t) { return `<p class="prt-p">${t}</p>`; }
+    function h3(t) { return `<h3 class="prt-h3">${t}</h3>`; }
+    function li(t) { return `<li>${t}</li>`; }
+    function ul(items) { return `<ul class="prt-ul">${items.map(li).join('')}</ul>`; }
+
+    // ── FINDINGS GRID ────────────────────────────────────────
+    const FINDINGS_DATA = [
       { num:'3.1', kleur:'#2A9298', titel:'De kennisfase is grotendeels voorbij',
-        tekst:'Partijen kennen MPG, HNN, CO₂-opslag en materialenpaspoorten. Woningconcepten tonen aan dat biobased technisch haalbaar is. De hoofdvraag is niet meer óf het kan, maar waarom het nog niet standaard gebeurt.' },
+        tekst:'Uit documentanalyse en interviews blijkt dat basiskennis over biobased bouwen sterk is gegroeid. Partijen kennen begrippen als MPG, MKI, HNN, CO₂-opslag, losmaakbaarheid en materiaalpaspoorten. Ook bestaan er meerdere woningconcepten die laten zien dat prefab, houtbouw, hybride bouw en circulaire ontwerpprincipes technisch haalbaar zijn. De vraag is niet meer <em>óf</em> biobased bouwen kan, maar waarom het nog niet standaard gebeurt. GMR hoeft dan ook niet primair nieuw beleid te ontwikkelen, maar bestaande kennis beter te organiseren en toe te passen.' },
       { num:'3.2', kleur:'#C0392B', titel:'Implementatie blijft achter bij beleid',
-        tekst:'HNN, NABB, materialenpaspoorten en CO₂-sturing bestaan, maar worden in projecten niet consequent gebruikt. Er is een structurele kloof tussen ambitie en uitvoering.' },
+        tekst:'HNN biedt een duidelijke taal voor circulair bouwen. De NABB geeft richting aan opschaling van vezelteelt en biobased bouwketens. Toch worden deze instrumenten in projecten nog niet consequent gebruikt. In de praktijk blijven investeringskosten, planning en risicovermijding vaak zwaarder wegen dan circulariteit en CO₂-reductie. Dit leidt tot een kloof tussen ambitie en uitvoering. Overheden en marktpartijen onderschrijven de doelstellingen, maar vertalen deze onvoldoende naar harde projectcriteria. Producenten en agrariërs investeren pas wanneer zij zekerheid hebben over afname; bouwers en ontwikkelaars wachten op prijsdalingen en heldere regels.' },
       { num:'3.3', kleur:'#E07B00', titel:'Kosten: drempel, maar niet de hele verklaring',
-        tekst:'Biobased materialen kunnen duurder zijn bij initiële aanschaf. Maar levensduurkosten, restwaarde en CO₂-opslag veranderen dit beeld fundamenteel. Zolang alleen aanschafprijs telt, blijft de langetermijnwaarde onzichtbaar.' },
-      { num:'3.4', kleur:'#8E44AD', titel:'Regelgeving werkt nog niet eenduidig',
-        tekst:'Brandveiligheidsinterpretaties, MPG-berekeningsregels en wisselende gemeentelijke interpretaties zorgen voor vertraging. Regionale afstemming verlaagt de onzekerheid significant.' },
+        tekst:'Biobased materialen kunnen gemiddeld duurder zijn dan conventionele alternatieven. Toch is kosten niet de enige verklaring. HNN-documenten en woningconceptanalyses laten zien dat levensduurkosten, restwaarde, demontabiliteit en CO₂-opslag het beeld kunnen veranderen wanneer breder wordt gekeken dan alleen initiële investering. Het probleem: deze bredere waarde wordt nog niet altijd meegenomen in aanbestedingen of projectbesluiten. Zolang biobased bouwen alleen wordt beoordeeld op aanschafprijs, blijft het kwetsbaar.' },
+      { num:'3.4', kleur:'#8E44AD', titel:'Regelgeving en vergunningen werken niet eenduidig',
+        tekst:'Brandveiligheidsinterpretaties per gemeente, vergunningprocedures en onzekerheid rond MPG en EU-productregelgeving zorgen voor vertraging. Marktpartijen geven aan dat biobased oplossingen soms technisch mogelijk zijn, maar dat onzekerheid in toetsing en toelating de toepassing vertraagt. GMR moet niet alleen sturen op ambities, maar ook op uitvoerbaarheid. Regionale afstemming over toetsing en standaardcriteria kan veel onzekerheid wegnemen.' },
       { num:'3.5', kleur:'#176064', titel:'Woningcorporaties zijn cruciaal voor opschaling',
-        tekst:'Corporaties sturen op levensduur, onderhoud en maatschappelijke waarde. Gezamenlijk optrekken geeft schaal, versnelt prijsdalingen en biedt zekerheid aan producenten.' },
+        tekst:'Woningcorporaties bouwen en beheren voor de lange termijn en hebben een maatschappelijke opdracht. Daardoor kunnen zij sturen op onderhoud, levensduur, woonkwaliteit én maatschappelijke waarde — niet alleen op initiële bouwkosten. Als corporaties binnen de regio gezamenlijk optrekken, ontstaat schaal in de vraag, wat leveranciers en bouwers zekerheid geeft en prijsdalingen versnelt. GMR kan hierin een faciliterende rol spelen door corporaties te verbinden, pilots te bundelen en kennisuitwisseling te organiseren.' },
     ];
+    const findingsHTML = `<div class="prt-findings-grid">${FINDINGS_DATA.map(f=>`
+      <div class="prt-finding-card" style="border-top:3px solid ${f.kleur}">
+        <div class="prt-finding-num">${f.num}</div>
+        <div class="prt-finding-titel">${f.titel}</div>
+        <div class="prt-finding-tekst">${f.tekst}</div>
+      </div>`).join('')}</div>`;
 
-    const KNELPUNTEN = [
-      { num:'01', titel:'Vrijblijvendheid',
-        tekst:'Duurzaamheidsinstrumenten als HNN worden gepresenteerd als handreiking, niet als randvoorwaarde. Zolang circulair bouwen een pluspunt is, wint prijsdruk bijna altijd.' },
-      { num:'02', titel:'Versnippering van kennis',
-        tekst:'Kennis is verspreid over rapporten en adviseurs. Voor projectleiders is het lastig snel te bepalen welke materialen geschikt zijn en hoe biobased prestaties uitgevraagd worden.' },
-      { num:'03', titel:'Onzichtbare businesscase',
-        tekst:'CO₂-opslag, restwaarde en demontabiliteit ontbreken in de businesscase. Biobased lijkt alleen duurder, terwijl de langetermijnwaarde structureel onderschat wordt.' },
-      { num:'04', titel:'Gebrek aan regionale uitvoeringsafspraken',
-        tekst:'Gemeenten hanteren verschillende interpretaties, eisen wisselen per project. Regionale afstemming biedt de voorspelbaarheid die investeringen in de bouwketen mogelijk maakt.' },
+    // ── TREND TABEL ──────────────────────────────────────────
+    const TRENDS_TABLE = [
+      ['HNN als beleidskader','HNN ontwikkelt zich tot gemeenschappelijke taal voor circulair bouwen.','Niet alleen noemen, maar opnemen in projectuitvragen en monitoring.'],
+      ['Industrialisatie en prefab','Prefab maakt biobased bouwen sneller, constanter en schaalbaarder.','Koppel biobased ambities aan woningconcepten en seriebouw.'],
+      ['Carbon credits en CO₂-opslag','CO₂-opslag kan financiële waarde krijgen via certificaten of labels.','Start klein met pilots, maar bouw alvast databasis en rekenmethodiek op.'],
+      ['Regionale ketens','Vezelteelt, verwerking en bouwvraag zijn nog onvoldoende verbonden.','Organiseer ketenafspraken tussen landbouw, producenten en bouwers.'],
+      ['Van vrijwillig naar verplicht','Duurzaamheid verschuift van ambitie naar normering.','Bereid gemeenten en markt voor op strengere eisen en maak voorlopers sterker.'],
     ];
+    const trendTableHTML = `
+      <table class="prt-table prt-trend-table">
+        <thead><tr><th style="width:22%">Trend</th><th style="width:39%">Betekenis</th><th style="width:39%">Implicatie voor GMR</th></tr></thead>
+        <tbody>${TRENDS_TABLE.map((r,i)=>`<tr>
+          <td style="font-weight:700;color:#0E4447">${r[0]}</td>
+          <td>${r[1]}</td>
+          <td style="color:#2A9298;font-style:italic">${r[2]}</td>
+        </tr>`).join('')}</tbody>
+      </table>`;
 
-    const ADVIEZEN = [
-      { num:1, titel:'Maak HNN het regionale basisniveau',
-        tekst:'Gebruik Het Nieuwe Normaal als standaardtaal voor alle relevante woningbouwprojecten.',
-        actie:'HNN-indicatoren in elk projectdocument' },
-      { num:2, titel:'Vertaal beleid naar aanbesteding',
-        tekst:'Verankering van circulaire en biobased ambities moet vroeg in het proces — vóór ontwerp, budget en planning vastliggen.',
+    // ── KNELPUNTEN ───────────────────────────────────────────
+    const KNELPUNTEN_DATA = [
+      { num:'5.1', kleur:'#C0392B', titel:'Vrijblijvendheid',
+        tekst:'Veel duurzaamheidsinstrumenten worden gepresenteerd als handreiking of ambitie. Daardoor kunnen partijen er wel naar verwijzen, maar ontstaat geen verplichting om prestaties daadwerkelijk te halen. Zolang circulair bouwen een pluspunt blijft in plaats van een randvoorwaarde, zal prijsdruk vaak winnen.' },
+      { num:'5.2', kleur:'#E07B00', titel:'Versnippering',
+        tekst:'Kennis is verspreid over rapporten, websites, dashboards, adviseurs en marktpartijen. Dit maakt het voor projectleiders lastig om snel te bepalen welke biobased materialen geschikt zijn, welke leveranciers bestaan, welke prestaties bewezen zijn en hoe deze moeten worden uitgevraagd.' },
+      { num:'5.3', kleur:'#8E44AD', titel:'Onzekerheid in de businesscase',
+        tekst:'De voordelen van biobased bouwen worden onvoldoende financieel gewaardeerd. CO₂-opslag, restwaarde en demontabiliteit zijn belangrijk, maar verschijnen niet altijd in de businesscase. Hierdoor ontstaat het beeld dat biobased vooral duurder is, terwijl de langetermijnwaarde onvoldoende zichtbaar wordt.' },
+      { num:'5.4', kleur:'#176064', titel:'Gebrek aan regionale uitvoeringsafspraken',
+        tekst:'Gemeenten kunnen verschillende interpretaties hanteren, ontwikkelaars ervaren verschillende eisen per project en leveranciers krijgen geen stabiele vraag. Een regionale aanpak kan zorgen voor voorspelbaarheid — dat is nodig om de markt te laten investeren.' },
+    ];
+    const knelpuntenHTML = `<div class="prt-findings-grid">${KNELPUNTEN_DATA.map(k=>`
+      <div class="prt-finding-card" style="border-top:3px solid ${k.kleur}">
+        <div class="prt-finding-num">${k.num}</div>
+        <div class="prt-finding-titel">${k.titel}</div>
+        <div class="prt-finding-tekst">${k.tekst}</div>
+      </div>`).join('')}</div>`;
+
+    // ── ADVIEZEN ─────────────────────────────────────────────
+    const ADVIEZEN_DATA = [
+      { num:1, kleur:'#0E4447', titel:'Maak HNN het regionale basisniveau',
+        tekst:'Gebruik Het Nieuwe Normaal als standaardtaal voor alle relevante woningbouwprojecten. Dit betekent dat HNN niet alleen als inspiratiebron wordt genoemd, maar dat de indicatoren worden opgenomen in uitvragen, beoordelingscriteria en monitoring.',
+        actie:'HNN-indicatoren verplicht in elk projectdocument' },
+      { num:2, kleur:'#176064', titel:'Vertaal beleid naar aanbesteding en gebiedsontwikkeling',
+        tekst:'Zorg dat circulaire en biobased ambities vroeg in het proces worden vastgelegd. Wanneer dit pas laat in het project gebeurt, zijn ontwerp, budget en planning vaak al bepaald. De aanbestedingsfase is het meest effectieve moment voor verankering.',
         actie:'Circulaire criteria verplicht in de uitvraagfase' },
-      { num:3, titel:'Ontwikkel een materialen- en kennisatlas',
-        tekst:'Bundel informatie over materialen, leveranciers, toepassingen en CO₂-opslag in één praktische omgeving.',
-        actie:'Dashboard uitbreiden naar regionale atlas' },
-      { num:4, titel:'Vorm een GMR-biobased coalitie',
-        tekst:'Breng gemeenten, corporaties, bouwbedrijven, agrariërs, verwerkers en onderwijs samen. De transitie vraagt ketensamenwerking.',
+      { num:3, kleur:'#2A9298', titel:'Ontwikkel een regionale materialen- en kennisatlas',
+        tekst:'Bundel informatie over materialen, leveranciers, toepassingen, prestaties, CO₂-opslag, brandveiligheid en voorbeeldprojecten in één praktische omgeving. Het bestaande dashboard kan hiervoor de basis vormen en uitgebreid worden tot een regionale atlas.',
+        actie:'Dashboard uitbreiden naar volledige regionale atlas' },
+      { num:4, kleur:'#C0392B', titel:'Vorm een GMR-biobased coalitie',
+        tekst:'Breng gemeenten, corporaties, bouwbedrijven, ontwikkelaars, agrariërs, verwerkers, onderwijs en financiers samen. De transitie vraagt ketensamenwerking; geen enkele partij kan dit zelfstandig oplossen. De coalitie organiseert vraag, aanbod en kennisdeling.',
         actie:'Coalitievorming starten in 2026' },
-      { num:5, titel:'Gebruik corporaties als launching customer',
-        tekst:'Start met een corporatiecoalitie die gezamenlijk biobased pilots en inkoopafspraken ontwikkelt.',
+      { num:5, kleur:'#E07B00', titel:'Gebruik corporaties als launching customer',
+        tekst:'Start met een corporatiecoalitie die gezamenlijk biobased pilots en inkoopafspraken ontwikkelt. Corporaties hebben schaal, maatschappelijke legitimiteit en langetermijnbelang. Door bundeling van vraag dalen materiaalprijzen en ontstaat leveringszekerheid voor de keten.',
         actie:'Gezamenlijk inkoopakkoord GMR-corporaties' },
-      { num:6, titel:'Koppel bouwen aan leren',
-        tekst:'Investeer in vakmanschap via MBO/HBO-onderwijs, praktijktrainingen en kennisdeling.',
-        actie:'Biobased bouwprofiel in MBO-curriculum' },
+      { num:6, kleur:'#8E44AD', titel:'Koppel bouwen aan leren',
+        tekst:'Investeer in vakmanschap via MBO/HBO-onderwijs, praktijktrainingen en kennisdeling over dampopen bouwen, houtbouw, droge verbindingen en circulaire detaillering. Zolang biobased kennis sectorbreed schaars is, blijft de markt structureel krap.',
+        actie:'Biobased bouwprofiel in MBO-kwalificatiestructuur' },
+    ];
+    const adviezenHTML = `<div class="prt-advies-grid">${ADVIEZEN_DATA.map(a=>`
+      <div class="prt-advies-card" style="border-left-color:${a.kleur}">
+        <div class="prt-advies-num" style="color:${a.kleur}">Advies ${a.num}</div>
+        <div class="prt-advies-titel">${a.titel}</div>
+        <div class="prt-advies-tekst">${a.tekst}</div>
+        <span class="prt-advies-actie" style="color:${a.kleur};background:${a.kleur}12">→ ${a.actie}</span>
+      </div>`).join('')}</div>`;
+
+    // ── ROADMAP TABEL ────────────────────────────────────────
+    const roadmapTableHTML = `
+      <table class="prt-table">
+        <thead><tr>
+          <th style="width:12%">Jaar</th>
+          <th style="width:25%">Doel</th>
+          <th>Concrete acties</th>
+        </tr></thead>
+        <tbody>
+          <tr style="background:#f0f8f8">
+            <td style="font-weight:800;color:#2A9298">2026</td>
+            <td style="font-weight:700">Van analyse naar afspraken</td>
+            <td>Bestuurlijk besluit over HNN als uitgangspunt; start materialenatlas; selectie corporatiepilots; dashboard uitbreiden met top 10 inzichten en prioriteitenmatrix.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;color:#176064">2027</td>
+            <td style="font-weight:700">Verankering in projecten</td>
+            <td>HNN opnemen in aanbestedingen; regionale modelteksten ontwikkelen; eerste CO₂- en materiaalpaspoorten toepassen; kennisdagen met gemeenten en markt.</td>
+          </tr>
+          <tr style="background:#f0f8f8">
+            <td style="font-weight:700;color:#176064">2028</td>
+            <td style="font-weight:700">Opschaling van ketens</td>
+            <td>Regionale inkoopcoalitie opzetten; afspraken met agrariërs en verwerkers; standaardisatie van biobased toepassingen per woningtype.</td>
+          </tr>
+          <tr>
+            <td style="font-weight:700;color:#176064">2029</td>
+            <td style="font-weight:700">Financiële instrumenten</td>
+            <td>Pilot met carbon credits of CO₂-labels; koppeling met financiering; structurele monitoring van CO₂-opslag en materiaalgebruik.</td>
+          </tr>
+          <tr style="background:#f0f8f8">
+            <td style="font-weight:800;color:#0E4447">2030</td>
+            <td style="font-weight:700">Normalisering</td>
+            <td>Biobased en circulair bouwen als standaardoptie in regionale woningbouw; GMR positioneren als landelijke voorbeeldregio.</td>
+          </tr>
+        </tbody>
+      </table>`;
+
+    // ── BRONNENLIJST ─────────────────────────────────────────
+    const BRONNEN = [
+      'Whitepaper GMR / projectpaper: projectdefinitie biobased bouwen GMR, inclusief doel, scope en stakeholders.',
+      'GMR Trendanalyse — Biobased &amp; Circulaire Bouw, 9 juni 2026: dashboard met trends en indicatoren.',
+      'Interviews 2026: BAM Wonen (Tom Stolker), Van Wijnen, Klokgroep, Talis, Gemeente Nijmegen en Provincie Gelderland.',
+      'Het Nieuwe Normaal: Leidraad Nieuwbouw 1.2, Onderbouwing HNN 1.0, Handreiking aanbesteden met HNN, Juridische toetsing HNN.',
+      'Nationale Aanpak Biobased Bouwen en GMR-onderzoeken over areaal, volume, beleid, hybride bouwen en MPG.',
+      'Woningconcepten en hun prestaties 2023/2024: vergelijking van prefab, biobased en circulaire woningconcepten.',
+      'ING Strategy Paper Biobased (land)bouw, Building Balance kennisdossier en WeGrow-notitie over ketenvorming.',
+      'Marktonderzoek Nederlandse carbon credits, Climate Cleanup Protocol en EU technical assessment over biogene koolstofopslag.',
+      'SER-advies Werken aan veranderkracht en overige documenten over arbeidsmarkt, regelgeving en standaardisatie.',
     ];
 
-    const ROADMAP = [
-      { jaar:'2026', cls:'arm-now',  titel:'Van analyse naar afspraken',
-        punten:['Bestuurlijk besluit: HNN als regionaal uitgangspunt','Start materialen- en kennisatlas','Selectie corporatiepilots biobased'] },
-      { jaar:'2027', cls:'',         titel:'Verankering in projecten',
-        punten:['HNN opnemen in aanbestedingen','Regionale modelteksten en beoordelingsformats','Eerste CO₂- en materialenpaspoorten'] },
-      { jaar:'2028', cls:'',         titel:'Opschaling van ketens',
-        punten:['Regionale inkoopcoalitie operationeel','Afspraken met agrariërs en verwerkers'] },
-      { jaar:'2029', cls:'',         titel:'Financiële instrumenten',
-        punten:['Pilot carbon credits of CO₂-labels','Koppeling met groene financiering'] },
-      { jaar:'2030', cls:'arm-goal', titel:'Normalisering',
-        punten:['Biobased = standaard in regionale woningbouw','GMR positioneren als landelijke voorbeeldregio'] },
-    ];
-
-    const findingsHTML = `
-      <div class="prt-findings-grid">
-        ${FINDINGS.map(f => `
-          <div class="prt-finding-card" style="border-top:3px solid ${f.kleur}">
-            <div class="prt-finding-num">${f.num}</div>
-            <div class="prt-finding-titel">${f.titel}</div>
-            <div class="prt-finding-tekst">${f.tekst}</div>
-          </div>`).join('')}
-      </div>`;
-
-    const problemenHTML = `
-      <div class="prt-problems-grid">
-        ${KNELPUNTEN.map(k => `
-          <div class="prt-problem-card">
-            <div class="prt-problem-num">${k.num}</div>
-            <div>
-              <div class="prt-problem-titel">${k.titel}</div>
-              <div class="prt-problem-tekst">${k.tekst}</div>
-            </div>
-          </div>`).join('')}
-      </div>`;
-
-    const adviezenHTML = `
-      <div class="prt-advies-grid">
-        ${ADVIEZEN.map(a => `
-          <div class="prt-advies-card">
-            <div class="prt-advies-num">Advies ${a.num}</div>
-            <div class="prt-advies-titel">${a.titel}</div>
-            <div class="prt-advies-tekst">${a.tekst}</div>
-            <span class="prt-advies-actie">→ ${a.actie}</span>
-          </div>`).join('')}
-      </div>`;
-
-    const roadmapHTML = `
-      <div class="prt-roadmap">
-        ${ROADMAP.map(item => `
-          <div class="prt-roadmap-item">
-            <div class="prt-roadmap-jaar ${item.cls}">${item.jaar}</div>
-            <div>
-              <div class="prt-roadmap-titel">${item.titel}</div>
-              <div class="prt-roadmap-punten">${item.punten.map(p=>`→ ${p}`).join('<br>')}</div>
-            </div>
-          </div>`).join('')}
-      </div>`;
-
+    // ── OUTPUT ───────────────────────────────────────────────
     triggerPrint(`
       <div class="prt-body">
         ${gmrHeader('Strategisch Adviesrapport — Biobased &amp; Circulaire Bouw')}
 
+        <!-- TITELBLAD -->
         <div class="prt-advies-hero" style="margin-top:16px">
-          <h1>Versnelling van biobased en circulaire bouw in de GMR</h1>
+          <h1>Versnelling van biobased en circulaire bouw<br>in de Groene Metropoolregio Arnhem-Nijmegen</h1>
           <p>Karam Rihmani &amp; Berend Dirken &nbsp;·&nbsp; Minor Duurzaam Ondernemen &amp; Circulaire Economie &nbsp;·&nbsp; HAN &nbsp;·&nbsp; Juni 2026</p>
         </div>
 
+        <!-- CENTRALE BOODSCHAP -->
         <div class="prt-central-boodschap">
           <div class="prt-central-boodschap-label">Centrale boodschap</div>
           <div class="prt-central-boodschap-text">
@@ -732,39 +802,111 @@ window.GMRPrint = (() => {
           </div>
         </div>
 
+        <!-- MANAGEMENTSAMENVATTING -->
         <div class="prt-advies-section">
-          <div class="prt-advies-section-title">Managementsamenvatting</div>
-          <p style="font-size:12px;line-height:1.65;color:#155558;margin:0 0 8px 0">
-            De GMR staat voor een dubbele opgave: woningbouw versnellen én de milieu-impact verlagen.
-            De regio beschikt al over kennis, beleidsinstrumenten en praktijkvoorbeelden.
-            Toch blijft toepassing achter bij ambities. <strong>Het probleem ligt niet bij gebrek aan kennis of techniek,
-            maar bij onvoldoende implementatie van bestaand beleid.</strong>
-          </p>
-          <p style="font-size:12px;line-height:1.65;color:#155558;margin:0">
-            Het advies: richt de volgende fase op verankering — maak HNN het standaardkader,
-            werk met een regionale implementatieroadmap, gebruik corporaties als launching customer
-            en bouw een regionale coalitie.
-          </p>
+          ${sectionTitle('Managementsamenvatting')}
+          ${body(`
+            ${p('De Groene Metropoolregio Arnhem-Nijmegen staat voor een dubbele opgave: de regio moet de woningbouw versnellen en tegelijkertijd de milieu-impact verlagen. Uit het onderzoek van Karam Rihmani en Berend Dirken blijkt dat de regio al beschikt over veel kennis, beleidsinstrumenten en praktijkvoorbeelden. Er zijn woningconcepten beschikbaar, marktpartijen experimenteren met biobased materialen en instrumenten zoals Het Nieuwe Normaal (HNN), de Nationale Aanpak Biobased Bouwen (NABB), materialenpaspoorten en carbon-creditmethodieken geven richting aan de transitie. Toch blijft de toepassing van biobased en circulaire bouwmaterialen achter bij de ambities.')}
+            ${p('<strong>De centrale conclusie is dat het probleem niet langer primair ligt bij gebrek aan kennis of techniek, maar bij onvoldoende implementatie van bestaand beleid.</strong> Beleidskaders zijn aanwezig, maar worden nog niet consequent vertaald naar aanbestedingen, gebiedsontwikkelingen, vergunningprocessen, inkoopafspraken en projectbesluiten. Daardoor blijft duurzaam bouwen te vaak afhankelijk van losse pilots, intrinsiek gemotiveerde koplopers of tijdelijke subsidies.')}
+            ${p('Het advies aan GMR is om de volgende fase van de transitie te richten op <strong>verankering</strong>: maak HNN het standaardkader voor regionale woningbouwprojecten, werk met een regionale implementatieroadmap, gebruik woningcorporaties als launching customer, ontwikkel een praktische materialen- en kennisomgeving en organiseer een regionale coalitie van gemeenten, corporaties, bouwers, ontwikkelaars, agrariërs, onderwijs en leveranciers.')}
+          `)}
         </div>
 
+        <!-- 1. AANLEIDING -->
         <div class="prt-advies-section">
-          <div class="prt-advies-section-title">Kernconclusies uit het onderzoek</div>
-          ${findingsHTML}
+          ${sectionTitle('1. Aanleiding en opdracht')}
+          ${body(`
+            ${p('Dit adviesrapport is opgesteld door Karam Rihmani en Berend Dirken, studenten gekoppeld aan de Groene Metropoolregio Arnhem-Nijmegen in het kader van de Minor Duurzaam Ondernemen &amp; Circulaire Economie (HAN). Het rapport bouwt voort op een dashboard, trendanalyse, beleidsanalyse, interviews en documentonderzoek.')}
+            ${p('De bouwsector heeft een grote invloed op grondstoffengebruik, CO₂-uitstoot en afvalstromen. Tegelijkertijd is de woningbouwopgave urgent. Biobased materialen — zoals hout, hennep, vlas, stro, cellulose en miscanthus — bieden kansen doordat zij fossiele of minerale materialen kunnen vervangen en biogene koolstof langdurig kunnen opslaan in gebouwen.')}
+            ${p('De versnelling vraagt om samenhang tussen beleid, markt, financiering, regelgeving, kennis, industrialisatie en regionale ketens. Dit adviesrapport brengt deze samenhang terug tot een uitvoerbare strategische lijn voor GMR.')}
+          `)}
         </div>
 
+        <!-- 2. ONDERZOEKSBASIS -->
         <div class="prt-advies-section">
-          <div class="prt-advies-section-title">Vier kernknelpunten</div>
-          ${problemenHTML}
+          ${sectionTitle('2. Onderzoeksbasis en gebruikte bronnen')}
+          ${body(`
+            ${p('Het advies is gebaseerd op triangulatie van bronnen: eigen trendanalyse, interviews, beleidsdocumenten, HNN-documenten, woningconceptvergelijkingen, onderzoeken naar carbon credits en rapporten over regionale ketenontwikkeling.')}
+            ${ul([
+              'Whitepaper GMR &amp; projectpaper: projectdefinitie biobased bouwen GMR.',
+              'GMR Trendanalyse 2026: dashboard met trends en indicatoren.',
+              '<strong>Interviews 2026:</strong> BAM Wonen (Tom Stolker), Van Wijnen (Bart Triep), Klokgroep (Thijs Pleijhuis), Talis (Melany Thijssen), Gemeente Nijmegen (Maarten van Ginkel), Provincie Gelderland (Myriam van Zetten).',
+              'Het Nieuwe Normaal: Leidraad Nieuwbouw 1.2, Onderbouwing HNN 1.0, Handreiking aanbesteden met HNN, Juridische toetsing HNN.',
+              'Nationale Aanpak Biobased Bouwen (NABB 2023) en GMR-onderzoeken.',
+              'Woningconcepten en hun prestaties 2023/2024, ING Strategy Paper, Building Balance kennisdossier.',
+              'Marktonderzoek Nederlandse carbon credits en Climate Cleanup Protocol.',
+            ])}
+          `)}
         </div>
 
+        <!-- 3. KERNBEVINDINGEN -->
         <div class="prt-advies-section">
-          <div class="prt-advies-section-title">Zes strategische adviezen aan de GMR</div>
-          ${adviezenHTML}
+          ${sectionTitle('3. Kernbevindingen uit het onderzoek')}
+          ${body(`${p('Op basis van documentanalyse en interviews zijn vijf kernbevindingen geïdentificeerd die het strategisch advies onderbouwen.')}
+          ${findingsHTML}`)}
         </div>
 
+        <!-- 4. TRENDANALYSE -->
         <div class="prt-advies-section">
-          <div class="prt-advies-section-title">Implementatieroadmap 2026–2030</div>
-          ${roadmapHTML}
+          ${sectionTitle('4. Trendanalyse: vijf overkoepelende bewegingen richting 2030')}
+          ${body(`
+            ${p('De uitgevoerde trendanalyse onderscheidt twaalf trends. Voor dit adviesrapport zijn vijf overkoepelende bewegingen strategisch het meest relevant. De belangrijkste ontwikkeling is de beweging van vrijwilligheid naar normalisering: HNN, materialenpaspoorten, CO₂-sturing en circulaire aanbesteding zijn nu vaak vrijwillig, maar ontwikkelen zich richting standaardpraktijk.')}
+            ${trendTableHTML}
+          `)}
+        </div>
+
+        <!-- 5. PROBLEEMANALYSE -->
+        <div class="prt-advies-section">
+          ${sectionTitle('5. Probleemanalyse — vier kernknelpunten')}
+          ${body(`
+            ${p('De kern van het probleem is niet dat er geen beleid bestaat, maar dat het beleid onvoldoende landt in de dagelijkse praktijk van woningbouwprojecten. De huidige situatie kan worden samengevat in vier knelpunten.')}
+            ${knelpuntenHTML}
+          `)}
+        </div>
+
+        <!-- 6. STRATEGISCH ADVIES -->
+        <div class="prt-advies-section">
+          ${sectionTitle('6. Strategisch advies — zes hoofdadviezen')}
+          ${body(`
+            ${p('Karam Rihmani en Berend Dirken adviseren GMR om de komende jaren niet te kiezen voor nog meer losse onderzoeken, maar voor een <strong>praktische implementatieagenda</strong>. Hieronder staan de zes hoofdadviezen.')}
+            ${adviezenHTML}
+          `)}
+        </div>
+
+        <!-- 7. ROADMAP -->
+        <div class="prt-advies-section">
+          ${sectionTitle('7. Implementatieroadmap 2026–2030')}
+          ${body(roadmapTableHTML)}
+        </div>
+
+        <!-- 8. DASHBOARD AANBEVELINGEN -->
+        <div class="prt-advies-section">
+          ${sectionTitle('8. Aanbevelingen voor het dashboard')}
+          ${body(`
+            ${p('Het dashboard is al sterk omdat het trends, bronnen en cijfers visueel samenbrengt. Voor de presentatie aan de opdrachtgever adviseren wij drie aanvullingen die het advies uitvoerbaarder maken:')}
+            ${ul([
+              'Een tab <strong>Top 10 inzichten</strong> met korte conclusies en handelingsperspectief per inzicht.',
+              'Een <strong>prioriteitenmatrix</strong> met impact, uitvoerbaarheid en urgentie per maatregel.',
+              'Een <strong>implementatieroadmap 2026–2030</strong> waarin zichtbaar wordt wat GMR per jaar kan doen.',
+            ])}
+            ${p('Deze aanvullingen voorkomen dat het dashboard alleen informatief is. Het wordt dan ook een beslisinstrument voor GMR.')}
+          `)}
+        </div>
+
+        <!-- 9. CONCLUSIE -->
+        <div class="prt-advies-section">
+          ${sectionTitle('9. Conclusie')}
+          ${body(`
+            ${p('De Groene Metropoolregio Arnhem-Nijmegen heeft een sterke uitgangspositie om koploper te worden in biobased en circulair bouwen. De regio beschikt over relevante beleidsambities, een urgente woningbouwopgave, betrokken gemeenten, corporaties, kennisinstellingen en marktpartijen.')}
+            ${p('<strong>De belangrijkste barrière is niet het ontbreken van beleid, maar het ontbreken van consequente implementatie.</strong> Zolang HNN, biobased criteria, materialenpaspoorten en CO₂-sturing vrijwillig blijven, blijft opschaling afhankelijk van koplopers en pilots.')}
+            ${p('De volgende stap is normalisering: van ambitie naar eis, van losse projecten naar regionale afspraken en van kennis naar uitvoering. Het centrale advies aan GMR is om de implementatie van bestaand beleid te versnellen door HNN regionaal te verankeren, corporaties te gebruiken als launching customer, een materialen- en kennisatlas te ontwikkelen en een regionale coalitie te vormen die de bouwketen verbindt. Daarmee kan GMR niet alleen bijdragen aan de eigen Woondeal- en duurzaamheidsdoelen, maar ook uitgroeien tot <strong>voorbeeldregio voor biobased en circulaire woningbouw in Nederland</strong>.')}
+          `)}
+        </div>
+
+        <!-- BRONNENLIJST -->
+        <div class="prt-advies-section">
+          ${sectionTitle('Bronnenlijst')}
+          ${body(ul(BRONNEN))}
         </div>
 
         <div class="prt-footer">
