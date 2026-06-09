@@ -24,6 +24,15 @@ window.GMRPrint = (() => {
     return 'logobestanden.svg';
   }
 
+  function gmrFooter(tabName) {
+    return `<div class="prt-footer">
+      GMR Biobased &amp; Circulaire Bouw Dashboard &nbsp;&middot;&nbsp;
+      ${tabName} &nbsp;&middot;&nbsp; Karam Rihmani &amp; Berend Dirken &nbsp;&middot;&nbsp;
+      Minor Duurzaam Ondernemen &amp; Circulaire Economie, HAN &nbsp;&middot;&nbsp;
+      ${today()}
+    </div>`;
+  }
+
   function gmrHeader(subtitle) {
     return `
       <div class="prt-header">
@@ -447,7 +456,7 @@ window.GMRPrint = (() => {
         <h2 class="prt-section-title" style="margin-top:18px">Trendoverzicht</h2>
         <p class="prt-intro">${(TRENDS||[]).length} trends voor de transitie naar biobased en circulaire bouw in de Groene Metropoolregio Arnhem-Nijmegen. Gebaseerd op interviews (april 2026), NABB 2023 en eigen onderzoek.</p>
         ${trendsHTML}
-        <div class="prt-footer">GMR Biobased &amp; Circulaire Bouw Dashboard · Karam &amp; Berend · Minor Duurzaam Ondernemen</div>
+        ${gmrFooter('Trendanalyse')}
       </div>`);
   }
 
@@ -508,7 +517,7 @@ window.GMRPrint = (() => {
             <thead><tr><th style="width:155px">Partij</th><th>Standpunt</th><th style="width:75px">Sentiment</th></tr></thead>
             <tbody>${standpuntRows}</tbody>
           </table>` : ''}
-        <div class="prt-footer">GMR Biobased &amp; Circulaire Bouw Dashboard · Notulen Explorer</div>
+        ${gmrFooter('Notulen Explorer')}
       </div>`);
   }
 
@@ -538,7 +547,7 @@ window.GMRPrint = (() => {
         <h2 class="prt-section-title" style="margin-top:18px">Alle stakeholders (${total})</h2>
         <p class="prt-intro"><strong>${interviewed} partijen geïnterviewd</strong> in april 2026 · ${total-interviewed} aanvullende stakeholders op basis van gepubliceerde bronnen.</p>
         ${sectionsHTML}
-        <div class="prt-footer">GMR Biobased &amp; Circulaire Bouw Dashboard · Stakeholderoverzicht</div>
+        ${gmrFooter('Stakeholders')}
       </div>`);
   }
 
@@ -615,7 +624,7 @@ window.GMRPrint = (() => {
           <tbody>${choicesRows}</tbody>
         </table>
         ${outcomesHTML}
-        <div class="prt-footer">GMR Biobased &amp; Circulaire Bouw Dashboard · Beleidsimulator Eindrapport · ${today()}</div>
+        ${gmrFooter('Beleidsscenario')}
       </div>`);
   }
 
@@ -900,12 +909,7 @@ window.GMRPrint = (() => {
           ${body(ul(BRONNEN))}
         </div>
 
-        <div class="prt-footer">
-          GMR Biobased &amp; Circulaire Bouw Dashboard &nbsp;·&nbsp;
-          Adviesrapport Karam Rihmani &amp; Berend Dirken &nbsp;·&nbsp;
-          Minor Duurzaam Ondernemen &amp; Circulaire Economie, HAN &nbsp;·&nbsp;
-          ${today()}
-        </div>
+        ${gmrFooter('Adviesrapport')}
       </div>`);
   }
 

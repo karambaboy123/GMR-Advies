@@ -3048,6 +3048,12 @@ html, body {
     print-color-adjust: exact !important;
     color-adjust: exact !important;
   }
+  /* Verwijder vaste hoogte zodat er geen lege pagina's onderaan ontstaan */
+  html, body {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
   /* Verberg alles behalve print-area */
   body > *:not(#print-area) {
     display: none !important;
@@ -3056,6 +3062,8 @@ html, body {
     display: block !important;
     position: static !important;
     width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
     padding: 0 !important;
     margin: 0 !important;
     background: white !important;
