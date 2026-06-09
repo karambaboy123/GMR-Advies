@@ -1009,6 +1009,19 @@ html, body {
 .sentiment-badge.neutraal { background: #EEF2FF; color: #3730A3; }
 .sentiment-badge.kritisch { background: #FDECEA; color: #C0392B; }
 
+/* Sentiment filter knop (button-reset + actief-staat) */
+.sentiment-filter-btn {
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-family: inherit;
+  transition: box-shadow 0.12s, transform 0.1s;
+}
+.sentiment-filter-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+.sentiment-filter-btn.is-active {
+  border-color: currentColor;
+  box-shadow: 0 0 0 2px currentColor;
+}
+
 /* ============================================================
    GAME / SIMULATOR TAB
    ============================================================ */
@@ -3577,7 +3590,17 @@ abbr[title]:hover::before {
   font-size: 11.5px; font-weight: 600;
   border: 1.5px solid; border-radius: 20px;
   padding: 3px 10px;
+  cursor: pointer;
+  background: none;
+  font-family: inherit;
+  transition: background 0.12s, box-shadow 0.12s, transform 0.1s;
 }
+.inz-cat-tag:hover { transform: translateY(-1px); opacity: 0.85; }
+.inz-cat-tag.is-active {
+  box-shadow: 0 0 0 2px currentColor;
+  font-weight: 700;
+}
+.inz-cat-all.is-active { background: #5553 !important; }
 .inz-cat-count {
   display: inline-block; color: #fff; font-size: 10px;
   font-weight: 700; border-radius: 10px;

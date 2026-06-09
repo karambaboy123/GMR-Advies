@@ -9,6 +9,7 @@ const NotulenTab = (() => {
   // BASE_PATH is globaal beschikbaar via data.js
 
   let activeQuestion = null;
+  let sentimentFilter = null;   // null = alles tonen
   let onRefreshIcons;
 
   const SENTIMENT_ICONS = {
@@ -75,6 +76,7 @@ const NotulenTab = (() => {
       const ans = q.antwoorden[id];
       if (!ans) return '';
       const sentiment = ans.sentiment;
+      if (sentimentFilter && sentiment !== sentimentFilter) return '';
       return `<div class="matrix-row">
         <div>
           <div class="matrix-stakeholder-name">${s.naam}</div>
@@ -92,7 +94,7 @@ const NotulenTab = (() => {
 
     // Non-interviewed standpunten
     const standpuntEntries = Object.entries(q.antwoorden)
-      .filter(([_, ans]) => ans.type === 'standpunt')
+      .filter(([_, ans]) => ans.type === 'standpunt' && (!sentimentFilter || ans.sentiment === sentimentFilter))
       .map(([idStr, ans]) => {
         const id = parseInt(idStr);
         const s = STAKEHOLDERS.find(x => x.id === id);
@@ -147,19 +149,22 @@ const NotulenTab = (() => {
           <span>${q.toelichting}</span>
         </div>` : ''}
 
-      <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;align-items:center">
-        <span class="sentiment-badge positief" style="font-size:12px">
+      <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center">
+        <button class="sentiment-badge positief sentiment-filter-btn ${sentimentFilter==='positief'?'is-active':''}"
+          data-filter="positief" style="font-size:12px" title="Filter op positief">
           <i data-lucide="thumbs-up" style="width:12px;height:12px"></i>
           ${counts.positief} positief
-        </span>
-        <span class="sentiment-badge neutraal" style="font-size:12px">
+        </button>
+        <button class="sentiment-badge neutraal sentiment-filter-btn ${sentimentFilter==='neutraal'?'is-active':''}"
+          data-filter="neutraal" style="font-size:12px" title="Filter op neutraal">
           <i data-lucide="minus-circle" style="width:12px;height:12px"></i>
           ${counts.neutraal} neutraal
-        </span>
-        <span class="sentiment-badge kritisch" style="font-size:12px">
+        </button>
+        <button class="sentiment-badge kritisch sentiment-filter-btn ${sentimentFilter==='kritisch'?'is-active':''}"
+          data-filter="kritisch" style="font-size:12px" title="Filter op kritisch">
           <i data-lucide="alert-triangle" style="width:12px;height:12px"></i>
           ${counts.kritisch} kritisch
-        </span>
+        </button>
         <span style="font-size:11px;color:var(--tekst-licht)">
           ${interviewedCount} interviews + ${standpuntCount} bronstandpunten
         </span>
@@ -192,6 +197,7 @@ const NotulenTab = (() => {
   // --------------------------------------------------------
   function selectQuestion(idx) {
     activeQuestion = idx;
+    sentimentFilter = null; // reset filter bij nieuwe vraag
     render();
     const matrix = document.getElementById('notulen-matrix');
     if (matrix) matrix.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -200,9 +206,19 @@ const NotulenTab = (() => {
   function init(refreshIconsFn) {
     onRefreshIcons = refreshIconsFn;
 
-    // Eenmalige delegated click listener voor bron-links (overleeft re-renders)
+    // Eenmalige delegated click listener (overleeft re-renders)
     const container = document.getElementById('notulen-content');
     container.addEventListener('click', e => {
+      // Sentiment filter knoppen
+      const filterBtn = e.target.closest('.sentiment-filter-btn');
+      if (filterBtn) {
+        e.preventDefault();
+        const f = filterBtn.dataset.filter;
+        sentimentFilter = (sentimentFilter === f) ? null : f; // toggle
+        render();
+        return;
+      }
+      // Bron-links
       const link = e.target.closest('.bron-link');
       if (link) {
         e.preventDefault();

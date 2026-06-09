@@ -6,6 +6,7 @@
 const InzichtenTab = (() => {
 
   let onRefreshIcons;
+  let activeCategory = null;  // null = alle categorieën tonen
 
   // ----------------------------------------------------------
   // DATA
@@ -152,18 +153,25 @@ const InzichtenTab = (() => {
 
       <!-- ── CATEGORIE-TAGS ────────────────────────────────── -->
       <div class="inz-cats">
+        <button class="inz-cat-tag inz-cat-all ${!activeCategory ? 'is-active' : ''}"
+          data-cat="" style="border-color:#666;color:#444">
+          Alle <span class="inz-cat-count" style="background:#555">${INZICHTEN.length}</span>
+        </button>
         ${categorieTags.map(cat => {
           const kleur = CATEGORIE_KLEUR[cat] || '#2A9298';
           const count = INZICHTEN.filter(i => i.categorie === cat).length;
-          return `<span class="inz-cat-tag" style="border-color:${kleur};color:${kleur}">
+          const isActive = activeCategory === cat;
+          return `<button class="inz-cat-tag ${isActive ? 'is-active' : ''}"
+            data-cat="${cat}"
+            style="border-color:${kleur};color:${kleur}${isActive ? `;background:${kleur}20` : ''}">
             ${cat} <span class="inz-cat-count" style="background:${kleur}">${count}</span>
-          </span>`;
+          </button>`;
         }).join('')}
       </div>
 
       <!-- ── INZICHTEN KAARTEN ─────────────────────────────── -->
       <div class="inz-grid">
-        ${INZICHTEN.map(inz => inzichtCardHTML(inz)).join('')}
+        ${INZICHTEN.filter(inz => !activeCategory || inz.categorie === activeCategory).map(inz => inzichtCardHTML(inz)).join('')}
       </div>
 
       <!-- ── SLOTBOODSCHAP ─────────────────────────────────── -->
@@ -208,6 +216,18 @@ const InzichtenTab = (() => {
   // ----------------------------------------------------------
   function init(refreshIconsFn) {
     onRefreshIcons = refreshIconsFn;
+
+    // Eenmalige delegated listener voor categorie-filter (overleeft re-renders)
+    const container = document.getElementById('inzichten-content');
+    container.addEventListener('click', e => {
+      const tag = e.target.closest('.inz-cat-tag[data-cat]');
+      if (!tag) return;
+      e.preventDefault();
+      const cat = tag.dataset.cat; // '' = alle categorieën
+      activeCategory = (cat === '' || activeCategory === cat) ? null : cat; // toggle
+      render();
+    });
+
     render();
   }
 
