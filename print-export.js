@@ -12,28 +12,23 @@ window.GMRPrint = (() => {
     });
   }
 
-  // Resolve logo.svg path (werkt op file:// én GitHub Pages)
+  // Resolve logobestanden.svg path (werkt op file:// én GitHub Pages)
   function logoSrc() {
     try {
-      // Als script zelf een src heeft, gebruik die als basis
       const scripts = document.querySelectorAll('script[src*="print-export"]');
       if (scripts.length) {
         const base = scripts[0].src.replace(/print-export\.js.*$/, '');
-        return base + 'logo.svg';
+        return base + 'logobestanden.svg';
       }
     } catch (_) {}
-    return 'logo.svg';
+    return 'logobestanden.svg';
   }
 
   function gmrHeader(subtitle) {
     return `
       <div class="prt-header">
         <div class="prt-logo">
-          <img src="${logoSrc()}" alt="GMR" class="prt-logo-img" />
-          <div class="prt-logo-text">
-            <span class="prt-logo-title">Groene Metropoolregio</span>
-            <span class="prt-logo-sub">Arnhem-Nijmegen</span>
-          </div>
+          <img src="${logoSrc()}" alt="Groene Metropoolregio Arnhem-Nijmegen" class="prt-logo-img" />
         </div>
         <div class="prt-header-right">
           <div class="prt-subtitle">${subtitle}</div>
@@ -72,13 +67,10 @@ window.GMRPrint = (() => {
         background: #0E4447;
         color: white;
       }
-      .prt-logo { display: flex; align-items: center; gap: 12px; }
+      .prt-logo { display: flex; align-items: center; }
       .prt-logo-img {
-        height: 48px; width: auto;
+        height: 54px; width: auto; display: block;
       }
-      .prt-logo-text { display: flex; flex-direction: column; }
-      .prt-logo-title { font-size: 13px; font-weight: 700; color: #fff; }
-      .prt-logo-sub   { font-size: 10.5px; color: #86c9cc; }
       .prt-header-right { text-align: right; }
       .prt-subtitle { font-size: 12px; font-weight: 600; color: #86c9cc; }
       .prt-date     { font-size: 10.5px; color: #86c9cc; margin-top: 2px; }
