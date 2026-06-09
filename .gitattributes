@@ -1,0 +1,10 @@
+# Normalize line endings
+* text=auto
+
+# Binary files — never change line endings
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.svg binary
+*.png binary
+*.jpg binary

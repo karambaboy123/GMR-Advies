@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GMR — Minor Duurzaam Ondernemen & Circulaire Economie</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ======================================================
+       SIDEBAR NAVIGATIE
+       ====================================================== -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="logo.svg" alt="Groene Metropoolregio Arnhem-Nijmegen" class="gmr-logo-img" />
+      <div class="sidebar-logo-label">Duurzaam Ondernemen &amp; Circulaire Economie</div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button class="nav-btn active" data-tab="stakeholders">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Stakeholders
+      </button>
+
+      <button class="nav-btn" data-tab="trends">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+          <polyline points="16 7 22 7 22 13"/>
+        </svg>
+        Trendanalyse
+      </button>
+
+      <button class="nav-btn" data-tab="notulen">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+          <polyline points="10 9 9 9 8 9"/>
+        </svg>
+        Notulen Explorer
+      </button>
+
+      <button class="nav-btn" data-tab="game">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        Beleidsscenario
+      </button>
+
+      <button class="nav-btn" data-tab="deskresearch">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        Deskresearch
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      Minor Duurzaam Ondernemen<br>
+      en Circulaire Economie<br>
+      Karam &amp; Berend &amp; GMR
+    </div>
+  </aside>
+
+  <!-- ======================================================
+       MAIN CONTENT
+       ====================================================== -->
+  <main class="main">
+
+    <!-- TAB 1: STAKEHOLDERS -->
+    <div id="tab-stakeholders" class="tab-content active">
+      <div class="page-header">
+        <div class="page-header-inner">
+          <div class="page-header-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Stakeholderanalyse
+          </div>
+          <h1>Stakeholders in de GMR-regio</h1>
+          <p>Overzicht van relevante actoren rondom circulaire en biobased bouw in de Groene Metropoolregio Arnhem-Nijmegen. Gebaseerd op deskresearch en 6 diepte-interviews (april 2026).</p>
+          <div class="page-header-stats">
+            <div class="stat-item">
+              <span class="stat-value">50</span>
+              <span class="stat-label">Stakeholders</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">6</span>
+              <span class="stat-label">Geïnterviewd</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">7</span>
+              <span class="stat-label">Categorieën</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-area">
+        <!-- Filter bar injected by stakeholders.js -->
+        <div id="stakeholders-filter-bar" class="filter-bar"></div>
+        <!-- Cards injected by stakeholders.js -->
+        <div id="stakeholders-content"></div>
+      </div>
+    </div>
+
+    <!-- TAB 2: TRENDANALYSE -->
+    <div id="tab-trends" class="tab-content">
+      <div class="page-header">
+        <div class="page-header-inner">
+          <div class="page-header-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+              <polyline points="16 7 22 7 22 13"/>
+            </svg>
+            Trendanalyse
+          </div>
+          <h1>Trendanalyse</h1>
+          <p>Tien ontwikkelingen die de transitie naar circulaire en biobased bouw in de GMR-regio beïnvloeden. Inclusief impact-matrix en stat-blokken per trend. Gebaseerd op eigen onderzoek, NABB (2023) en interviews met marktpartijen.</p>
+          <div class="page-header-stats">
+            <div class="stat-item">
+              <span class="stat-value">10</span>
+              <span class="stat-label">Trends</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">7</span>
+              <span class="stat-label">Hoge impact</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">2030</span>
+              <span class="stat-label">NABB doeljaar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-area">
+        <div id="trends-content"></div>
+      </div>
+    </div>
+
+    <!-- TAB 3: NOTULEN EXPLORER -->
+    <div id="tab-notulen" class="tab-content">
+      <div class="page-header">
+        <div class="page-header-inner">
+          <div class="page-header-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            Notulen Explorer
+          </div>
+          <h1>Interview Explorer</h1>
+          <p>Selecteer een thema om te zien hoe de 6 geïnterviewde partijen én niet-geïnterviewde stakeholders er tegenover staan. Interviews afgenomen in maart–april 2026.</p>
+          <div class="page-header-stats">
+            <div class="stat-item">
+              <span class="stat-value">12</span>
+              <span class="stat-label">Thema's</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">6</span>
+              <span class="stat-label">Geïnterviewd</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">55+</span>
+              <span class="stat-label">Bronstandpunten</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-area">
+        <div id="notulen-content"></div>
+      </div>
+    </div>
+
+    <!-- TAB 4: BELEIDSSCENARIO SIMULATOR -->
+    <div id="tab-game" class="tab-content">
+      <div class="page-header">
+        <div class="page-header-inner">
+          <div class="page-header-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            Beleidsscenario Simulator
+          </div>
+          <h1>Welke beleidskoers werkt écht?</h1>
+          <p>Kies een rol en doorloop 4 rondes van cruciale beleidskeuzes. Onverwachte gebeurtenissen verstoren uw koers. Pas aan het einde ziet u hoe uw systeemvariabelen hebben geëvolueerd. Gebaseerd op HNN, NABB en 6 diepte-interviews (april 2026).</p>
+        </div>
+      </div>
+      <div class="content-area">
+        <div id="game-content"></div>
+      </div>
+    </div>
+
+    <!-- TAB 5: DESKRESEARCH -->
+    <div id="tab-deskresearch" class="tab-content">
+      <div class="page-header">
+        <div class="page-header-inner">
+          <div class="page-header-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+            </svg>
+            Bronbestanden
+          </div>
+          <h1>Deskresearch — Alle Bronnen</h1>
+          <p>Alle onderzoeksdocumenten, HNN-leidraden, interviews en beleidsstukken die ten grondslag liggen aan dit dashboard. Klik op een document om het te openen.</p>
+          <div class="page-header-stats">
+            <div class="stat-item">
+              <span class="stat-value">54</span>
+              <span class="stat-label">Documenten</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">7</span>
+              <span class="stat-label">Categorieën</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">18</span>
+              <span class="stat-label">HNN bronnen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-area">
+        <div id="deskresearch-content"></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ======================================================
+     STAKEHOLDER MODAL
+     ====================================================== -->
+<div class="modal-overlay" id="stakeholder-modal" role="dialog" aria-modal="true">
+  <div class="modal" id="stakeholder-modal-inner">
+    <!-- Content injected by stakeholders.js -->
+  </div>
+</div>
+
+<!-- ======================================================
+     SCRIPTS — volgorde is belangrijk
+     ====================================================== -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="data.js"></script>
+<script src="game-data.js"></script>
+<script src="stakeholders.js"></script>
+<script src="trends.js"></script>
+<script src="notulen.js"></script>
+<script src="print-export.js"></script>
+<script src="game.js"></script>
+<script src="deskresearch.js"></script>
+<script src="app.js"></script>
+
+<!-- Print-area: verborgen in normale weergave, zichtbaar bij afdrukken -->
+<div id="print-area"></div>
+
+</body>
+</html>
