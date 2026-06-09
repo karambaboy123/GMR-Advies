@@ -174,7 +174,7 @@ const InzichtenTab = (() => {
             <strong>Van inzicht naar actie</strong>
             <p>Deze tien inzichten zijn geen conclusies op papier — ze zijn aanknopingspunten voor directe actie.
             De GMR heeft de positie, het netwerk en de schaalbaarheid om van deze inzichten concrete beleidsverankering te maken.
-            <br>Het advies: <strong>start in 2026 met de verankering van HNN, corporatiepilots en ketenafspraken</strong>.</p>
+            <br>Het advies: <strong>start in 2026 met de verankering van HNN, corporatiepilots en ketenafspraken</strong></p>
           </div>
         </div>
       </div>
