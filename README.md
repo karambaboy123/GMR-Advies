@@ -53,32 +53,6 @@ Dynamische scenariosimulatie met vier speelbare rollen: wethouder duurzaamheid, 
 
 ---
 
-## Projectstructuur
-
-```
-GMR Advies/
-|-- index.html              Hoofdpagina
-|-- styles.css              Volledige opmaak (GMR-huisstijl)
-|-- app.js                  Initialisatie en tabnavigatie
-|-- data.js                 Stakeholders, trends en notulendata
-|-- game-data.js            Simulatordata (rollen, rondes, scenario's)
-|-- stakeholders.js         Tab 1: Stakeholderoverzicht
-|-- trends.js               Tab 2: Trendanalyse
-|-- notulen.js              Tab 3: Notulen Explorer
-|-- game.js                 Tab 4: Beleidsimulator
-|-- deskresearch.js         Tab 5: Deskresearch overzicht
-|-- print-export.js         PDF-export voor alle tabbladen
-|-- logo.svg                GMR-logo
-|
-|-- Biobased en Circulaire Bouw/
-    |-- Interviews/         Zeven transcripten van diepte-interviews (april 2026)
-    |-- *.pdf               Beleidsdocumenten, leidraden en rapporten
-    |-- *.docx              Onderzoeksdocumenten
-    |-- *.xlsx              Trendanalyse onderbouwing en maatregelenbox
-```
-
----
-
 ## Geinterviewde partijen
 
 | Organisatie | Sector | Functie |
