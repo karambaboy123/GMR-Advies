@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Tab routing
   const navBtns = document.querySelectorAll('.nav-btn');
   const tabs = document.querySelectorAll('.tab-content');
-  let currentTab = 'stakeholders';
+  let currentTab = 'home';
 
   function switchTab(tabName) {
     currentTab = tabName;
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initialise all tab modules
+  HomeTab.init(refreshIcons);
   StakeholdersTab.init(refreshIcons);
   TrendsTab.init(refreshIcons);
   NotulenTab.init(refreshIcons);
