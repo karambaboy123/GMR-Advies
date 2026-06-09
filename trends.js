@@ -86,19 +86,58 @@ const TrendsTab = (() => {
   }
 
   // ----------------------------------------------------------
-  // IMPACT MATRIX (scatter)
+  // IMPACT MATRIX (scatter) — met jitter voor overlappende dots
   // ----------------------------------------------------------
   function impactMatrixHTML() {
+    // Groepeer per positie-bucket (impact × tijdlijn) voor jitter
+    const groups = {};
+    TRENDS.forEach(t => {
+      const k = `${t.impact}-${t.tijdlijn}`;
+      if (!groups[k]) groups[k] = [];
+      groups[k].push(t.id);
+    });
+
+    // Jitter-patronen in procentpunten (dx, dy) t.o.v. centrumpositie
+    const JITTER_PAT = {
+      1: [[0, 0]],
+      2: [[-5, 0], [5, 0]],
+      3: [[0, -6], [-6, 5], [6, 5]],
+      4: [[-6, -5], [6, -5], [-6, 5], [6, 5]],
+      5: [[0, -7], [-7, -2], [7, -2], [-4, 7], [4, 7]],
+      6: [[-7, -6], [0, -6], [7, -6], [-7, 6], [0, 6], [7, 6]],
+    };
+    function jitter(n, i) {
+      const p = JITTER_PAT[Math.min(n, 6)] || JITTER_PAT[6];
+      return p[i % p.length] || [0, 0];
+    }
+
     const dots = TRENDS.map(t => {
-      const x = TIJDLIJN_X[t.tijdlijn] || 50;
-      const y = IMPACT_Y[t.impact]    || 50;
+      const bx  = TIJDLIJN_X[t.tijdlijn] || 50;
+      const by  = IMPACT_Y[t.impact]     || 50;
+      const k   = `${t.impact}-${t.tijdlijn}`;
+      const grp = groups[k];
+      const idx = grp.indexOf(t.id);
+      const [dx, dy] = jitter(grp.length, idx);
+      const x = bx + dx;
+      const y = by + dy;
+      // Korte label: eerste 2 woorden van titel
+      const shortLabel = t.titel.replace(/^[^:]+:\s*/, '').split(' ').slice(0, 3).join(' ');
       return `<div class="im-dot im-${t.impact}" data-tid="${t.id}"
                    style="left:${x}%;top:${y}%"
                    title="${t.titel}">
-        <i data-lucide="${t.icon}" style="width:14px;height:14px;pointer-events:none"></i>
-        <div class="im-dot-label">${t.titel.split(':')[0].trim().split(' ').slice(0,3).join(' ')}</div>
+        <span class="im-dot-num">${t.id}</span>
+        <div class="im-dot-label">${t.titel}</div>
       </div>`;
     }).join('');
+
+    // Legenda onder de matrix
+    const legendItems = [
+      { cls: 'im-hoog',   label: 'Hoge impact'    },
+      { cls: 'im-midden', label: 'Gemiddelde impact' },
+      { cls: 'im-laag',   label: 'Lage impact'    },
+    ].map(l => `<span class="im-legend-item">
+      <span class="im-legend-dot ${l.cls}"></span>${l.label}
+    </span>`).join('');
 
     return `
       <div class="trends-matrix-wrapper">
@@ -107,14 +146,17 @@ const TrendsTab = (() => {
           Impact × Tijdshorizon &nbsp;·&nbsp; klik op een punt om de kaart te openen
         </div>
         <div class="trends-matrix">
-          <div class="im-axis-y-label">Impact ↑</div>
+          <!-- Y-as labels -->
+          <div class="im-axis-y">
+            <div class="im-ylabel" style="top:${IMPACT_Y.hoog}%">Hoog</div>
+            <div class="im-ylabel" style="top:${IMPACT_Y.midden}%">Midden</div>
+            <div class="im-ylabel" style="top:${IMPACT_Y.laag}%">Laag</div>
+          </div>
           <!-- Plot -->
           <div class="im-plot">
-            <!-- Kwadrant-achtergronden -->
-            <div class="im-zone im-zone-urgent"  title="Urgent: hoge impact, korte termijn"></div>
-            <div class="im-zone im-zone-plan"    title="Plannen: hoge impact, lange termijn"></div>
-            <div class="im-zone im-zone-monitor" title="Monitoren: lage impact"></div>
-            <!-- Rasterlijnen -->
+            <div class="im-zone im-zone-urgent"></div>
+            <div class="im-zone im-zone-plan"></div>
+            <div class="im-zone im-zone-monitor"></div>
             <div class="im-grid-h" style="top:33.3%"></div>
             <div class="im-grid-h" style="top:66.6%"></div>
             <div class="im-grid-v" style="left:33.3%"></div>
@@ -128,6 +170,7 @@ const TrendsTab = (() => {
             <span>Lange termijn</span>
           </div>
         </div>
+        <div class="im-legend">${legendItems}</div>
       </div>`;
   }
 

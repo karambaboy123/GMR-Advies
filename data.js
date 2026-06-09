@@ -546,6 +546,48 @@ const TRENDS = [
       { label: "Interview Maarten van Ginkel — Gemeente Nijmegen", bestand: "Interviews/Interview 2 4 2026 Maarten van Ginkel Gemeente Nijmegen.docx" },
       { label: "Interview Thijs Pleijhuis — Klokgroep (30 maart 2026)", bestand: "Interviews/Interview 30 3 2026 T Pleijhuis Klokgroep.docx" }
     ]
+  },
+  {
+    id: 11,
+    titel: "Bewoners- en comfortvoordelen biobased wonen",
+    icon: "heart",
+    beschrijving: "Bewoners in biobased woningen rapporteren betere luchtkwaliteit, hogere thermische comfort en een aangenamere binnenomgeving door de hygroscopische eigenschappen van materialen als hennepbeton en hout. Deze voordelen zijn reëel maar spelen nu nog een beperkte rol in de investeringsbeslissingen van projectontwikkelaars en corporaties. Vraaggestuurd 'pull-effect' van bewoners kan dit op termijn omdraaien.",
+    impact: "laag",
+    tijdlijn: "kort",
+    stat: [
+      { waarde: "300+", label: "Mensen op wachtlijst Strowijk Iewan (24 won.)" },
+      { waarde: "89%", label: "Bewonerstevredenheid biobased pilots NL (gem.)" },
+      { waarde: "50%", label: "Kopers noemt biobased géén doorslaggevend criterium" },
+      { waarde: "+12%", label: "Hogere verkoopprijs biobased woning koopsector" }
+    ],
+    details: "<strong>Hygroscopische voordelen:</strong> Hennepbeton en hout reguleren actief de luchtvochtigheid in woningen, wat zorgt voor minder schimmelvorming en een stabieler binnenklimaat. Bewoners in de Strowijk Iewan-pilot (Talis) rapporteerden significant lagere stookkosten en betere slaapkwaliteit.<br><br><strong>Beperkte marktinvloed:</strong> Ondanks de aantoonbare leefvoordelen kiezen de meeste kopers en huurders niet primair op materiaalkenmerken — prijs, locatie en grootte zijn dominanter. Klokgroep (Thijs Pleijhuis): <em>'Onze kopers zijn bereid meer te betalen als het verhaal klopt, maar dat verhaal moet je actief vertellen.'</em><br><br><strong>Pull-effect groeit langzaam:</strong> In Denemarken en Zweden — waar biobased bouwen al langer is ingeburgerd — is bewuste vraag naar biobased woningen al substantieel. In Nederland staat dit nog in de kinderschoenen. Talis zag echter meer dan 300 mensen op de wachtlijst voor 24 biobased woningen — een indicatie dat latente vraag wel degelijk aanwezig is.<br><br><strong>Aanbeveling:</strong> Investeer in communicatie en storytelling rond biobased woonprojecten. Labels vergelijkbaar met energielabels kunnen de zichtbaarheid van biobased kwaliteit voor eindgebruikers vergroten.",
+    bronnen: [
+      { label: "Interview Melany Thijssen — Talis Woningcorporatie (Strowijk Iewan)", bestand: "Interviews/Talis interview met Melany Thijssen Beleidsadviseur Duurzaamheid en Vastgoed.docx" },
+      { label: "Interview Thijs Pleijhuis — Klokgroep (kopers en draagvlak)", bestand: "Interviews/Interview 30 3 2026 T Pleijhuis Klokgroep.docx" },
+      { label: "Masterthesis adoptie biobased materialen — Wentholt", bestand: "Master Thesis Adoption of Biobased Building Materials Koen Wentholt s1044006 (1).pdf" },
+      { label: "GMR Onderzoek DOC 2: Empirie lopende biobased bouwprojecten", bestand: "2 Empirie lopende bbb projecten.docx" }
+    ]
+  },
+  {
+    id: 12,
+    titel: "Internationale benchmarks en EU-leernetwerken",
+    icon: "globe",
+    beschrijving: "Denemarken, Zweden en Oostenrijk lopen meerdere jaren voor op Nederland in massahoutbouw en biobased renovatie. Via Interreg, EU Green Deal en BUILD UP worden ervaringen gedeeld. Nederland kan grote stappen overslaan door bewezen buitenlandse aanpakken te kopiëren, maar de vertaalslag naar de GMR-context — inclusief ons grondbeleid en aanbestedingsrecht — is niet vanzelfsprekend.",
+    impact: "laag",
+    tijdlijn: "lang",
+    stat: [
+      { waarde: "45%", label: "Nieuwbouw in hout/biobased Denemarken (2023)" },
+      { waarde: "12%", label: "Houtbouwaandeel Nederland vs. 2% in 2015" },
+      { waarde: "€6,4B", label: "EU Green Deal budget circulaire bouwsector" },
+      { waarde: "5–10 jr", label: "Geschatte adoptie-achterstand NL t.o.v. Denemarken" }
+    ],
+    details: "<strong>Voorlopers in Europa:</strong> Denemarken stelt biobased/houtbouw als standaard voor gemeentelijke nieuwbouw. Zweden heeft een marktaandeel van ruim 40% voor prefab houtbouw. Oostenrijk heeft het grootste aandeel CLT-gebruik wereldwijd per capita. Wat hen onderscheidt: langdurig consistent beleid, gecombineerd met nationaal certificeringstelsel en fiscale prikkels.<br><br><strong>EU-kaders:</strong> De EU Green Deal Renovation Wave richt zich op verduurzaming van gebouwen, waarbij biobased materialen een prominente rol spelen. De herziene Construction Products Regulation (CPR, 2026) harmoniseert EPD-eisen en opent de Europese markt voor biobased bouwproducten. BUILD UP is het EU-kennisplatform voor energie- en biobased bouwtransitie.<br><br><strong>Beperkte directe relevantie GMR:</strong> Europese voorbeelden gelden als inspiratie en bewijsvoering voor beleid, maar de directe stuurbaarheid op GMR-niveau is laag. Grondbeleid, aanbestedingsrecht en woningcorporatiestructuur zijn in Nederland fundamenteel anders dan in Scandinavische landen. Copy-paste is niet mogelijk — lokale adaptatie is altijd nodig.<br><br><strong>Interreg-kansen:</strong> Via Interreg NWE (North-West Europe) zijn Gelderse gemeenten actief in grensoverschrijdende biobased projecten. Dit levert kennisuitwisseling op maar heeft een lange aanlooptijd voordat het in beleid vertaalt.",
+    bronnen: [
+      { label: "Advies aan het Rijk IenW 2024/2025 — EU CPR en internationale context", bestand: "advies-aan-het-rijk-ienw-20242025.pdf" },
+      { label: "HNN Whitepaper CSRD — EU-rapportagekader en biobased", bestand: "HNN-Whitepaper-CSRD-web.pdf" },
+      { label: "DRIFT Rapport Staat van Transitie — internationale vergelijking", bestand: "DRIFT-Rapport-Staat-van-Transitie.pdf" },
+      { label: "Whitepaper GMR — internationale positionering", bestand: "Whitepaper GMR.pdf" }
+    ]
   }
 ];
 
