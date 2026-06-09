@@ -29,28 +29,28 @@ De centrale boodschap van het onderzoek:
 
 ## Tabbladen
 
-### 🏠 Home *(startpagina)*
+### Home *(startpagina)*
 Overzichtspagina met projectintroductie, centrale boodschap, statistische samenvatting en klikbare navigatiekaarten naar alle secties. Geeft direct inzicht in de opzet en scope van het dashboard.
 
-### 📄 Adviesrapport
+### Adviesrapport
 Volledig strategisch adviesrapport op basis van het DOCX-bronbestand. Bevat negen secties: managementsamenvatting, aanleiding, onderzoeksbasis, vijf kernconclusies, trendtabel, vier knelpunten, zes strategische adviezen, implementatieroadmap 2026–2030, dashboard-aanbevelingen en conclusie. Exporteerbaar als PDF in GMR-huisstijl.
 
-### ⭐ Top 10 Inzichten
+### Top 10 Inzichten
 De tien meest bepalende lessen voor de versnelling van biobased en circulaire bouw in de GMR. Elke inzichtkaart toont categorie, beschrijving, GMR-handelingsperspectief en actiepunt. Kleurgecodeerd per categorie (implementatie, beleid, financiën, regelgeving, samenwerking, innovatie, strategie).
 
-### 📈 Trendanalyse
+### Trendanalyse
 Twaalf onderbouwde trends voor de biobased bouwtransitie, weergegeven als uitklapbare kaarten met beschrijving, statistieken, tijdlijn en bronnen. Een interactieve impactmatrix (impact × tijdshorizon) geeft een visueel overzicht. Klik op een punt in de matrix om direct naar de bijbehorende trend te springen. Exporteerbaar als PDF.
 
-### 👥 Stakeholders
+### Stakeholders
 Overzicht van vijftig relevante partijen in de GMR, onderverdeeld in zeven categorieën: gemeenten, provincie, bouwbedrijven, woningcorporaties, brancheorganisaties, kennisinstellingen en rijksoverheid. Geïnterviewde partijen zijn apart gemarkeerd. Filterbaar op categorie en interviewstatus. Exporteerbaar als PDF.
 
-### 📋 Notulen Explorer
+### Notulen Explorer
 Interviewmatrix op basis van centrale onderzoeksvragen. Per vraag worden de standpunten van geïnterviewde partijen naast elkaar getoond, inclusief sentimentanalyse (positief, neutraal, kritisch) en bronvermelding. Exporteerbaar als PDF.
 
-### 🎮 Beleidsscenario Simulator
+### Beleidsscenario Simulator
 Dynamische scenariosimulatie met **vijf** speelbare rollen: gemeente, provincie, aannemer, woningcorporatie en **bouwboer/agrariër**. Per rol zijn vier beleidsrondes, elk met vier keuzemogelijkheden. Keuzes beïnvloeden vier verborgen systeemvariabelen: politiek draagvlak, marktgroei, budgetruimte en samenwerking. Het eindscherm toont een radar-chart, prognoses voor 2030, het beleidspad en een eindscenario. Stakeholderreacties zijn weergegeven als rollen (niet als namen). Exporteerbaar als PDF-rapport.
 
-### 📚 Deskresearch
+### Deskresearch
 Bronnenanalyse, beleidsdocumenten en literatuuroverzicht waarop de trendanalyse en adviezen zijn gebaseerd.
 
 ---
@@ -82,45 +82,6 @@ Bronnenanalyse, beleidsdocumenten en literatuuroverzicht waarop de trendanalyse 
 | Talis Woningcorporatie | Woningcorporatie | Beleidsadviseur Duurzaamheid |
 
 Alle interviews zijn afgenomen in april 2026 in het kader van de Minor Duurzaam Ondernemen en Circulaire Economie aan de HAN.
-
----
-
-## Bestandsstructuur
-
-```
-GMR Advies/
-├── index.html          # Hoofd HTML — navigatie en tab-containers
-├── app.js              # Tab routing en module-initialisatie
-├── styles.css          # Alle CSS — GMR-huisstijl en componenten
-├── data.js             # Centrale data: trends, stakeholders, game-rollen
-├── game-data.js        # Beleidsimulator data: rondes, enrichments, scenario's
-│
-├── home.js             # Tab: Startpagina / overzichtsdashboard
-├── adviesrapport.js    # Tab: Strategisch adviesrapport
-├── inzichten.js        # Tab: Top 10 inzichten
-├── trends.js           # Tab: Trendanalyse
-├── stakeholders.js     # Tab: Stakeholderoverzicht
-├── notulen.js          # Tab: Notulen Explorer
-├── game.js             # Tab: Beleidsscenario Simulator
-├── deskresearch.js     # Tab: Deskresearch
-│
-├── print-export.js     # PDF-export voor alle tabbladen
-├── logo.svg            # GMR-logo (teal) — gebruikt in sidebar
-└── logobestanden.svg   # GMR-logo (wit, horizontaal) — gebruikt in PDFs
-```
-
----
-
-## Technologie
-
-| Component | Keuze | Reden |
-|---|---|---|
-| JavaScript | Vanilla JS (geen framework) | Werkt direct via `file://`, geen build-stap |
-| Iconen | Lucide Icons via CDN | Lichtgewicht, consistent, SVG-gebaseerd |
-| PDF-export | `window.print()` + print CSS | Geen externe afhankelijkheden, werkt offline |
-| Grafieken | Inline SVG (handgeschreven) | Volledige controle, geen library vereist |
-| Stijl | CSS custom properties | GMR-huisstijl consequent door hele codebase |
-| Modules | IIFE-patroon per tab | Encapsulatie zonder build-tooling |
 
 ---
 
