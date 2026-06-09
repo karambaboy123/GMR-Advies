@@ -53,22 +53,6 @@ Dynamische scenariosimulatie met vier speelbare rollen: wethouder duurzaamheid, 
 
 ---
 
-## Lokaal gebruiken
-
-Dit dashboard vereist geen installatie, server of build-stap.
-
-1. Download of kloon deze repository
-2. Open `index.html` in een moderne browser (Chrome, Edge of Firefox aanbevolen)
-3. Alle functionaliteit werkt direct
-
-Voor de koppeling naar lokale documentbestanden (interviews en PDF-rapporten) dient het pad in `data.js` aangepast te worden:
-
-```javascript
-const BASE_PATH = 'file:///PAD/NAAR/JOUW/MAP/Biobased en Circulaire Bouw/';
-```
-
----
-
 ## Projectstructuur
 
 ```
