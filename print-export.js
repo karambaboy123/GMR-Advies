@@ -31,8 +31,7 @@ window.GMRPrint = (() => {
           <img src="${logoSrc()}" alt="Groene Metropoolregio Arnhem-Nijmegen" class="prt-logo-img" />
         </div>
         <div class="prt-header-right">
-          <div class="prt-subtitle">${subtitle}</div>
-          <div class="prt-date">${today()}</div>
+          <div class="prt-subtitle">${subtitle} &nbsp;·&nbsp; ${today()}</div>
         </div>
       </div>
       <div class="prt-rule"></div>`;
@@ -72,8 +71,8 @@ window.GMRPrint = (() => {
         height: 54px; width: auto; display: block;
       }
       .prt-header-right { text-align: right; }
-      .prt-subtitle { font-size: 12px; font-weight: 600; color: #86c9cc; }
-      .prt-date     { font-size: 10.5px; color: #86c9cc; margin-top: 2px; }
+      .prt-subtitle { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.90); }
+      .prt-date     { display: none; }
       .prt-rule { border: none; border-top: 3px solid #2A9298; margin: 0; }
 
       /* ── BODY LAYOUT ────────────────────────────────────── */
@@ -444,7 +443,7 @@ window.GMRPrint = (() => {
 
     triggerPrint(`
       <div class="prt-body">
-        ${gmrHeader('Trendanalyse — Biobased &amp; Circulaire Bouw')}
+        ${gmrHeader('Trendanalyse')}
         <h2 class="prt-section-title" style="margin-top:18px">Trendoverzicht</h2>
         <p class="prt-intro">${(TRENDS||[]).length} trends voor de transitie naar biobased en circulaire bouw in de Groene Metropoolregio Arnhem-Nijmegen. Gebaseerd op interviews (april 2026), NABB 2023 en eigen onderzoek.</p>
         ${trendsHTML}
@@ -489,7 +488,7 @@ window.GMRPrint = (() => {
 
     triggerPrint(`
       <div class="prt-body">
-        ${gmrHeader('Notulen Explorer — Interviewmatrix')}
+        ${gmrHeader('Notulen Explorer')}
         <p class="prt-question-num" style="margin-top:16px">Vraag ${qIdx+1} van ${NOTULEN_QUESTIONS.length}</p>
         <div class="prt-question-box">${q.vraag}</div>
         ${q.toelichting ? `<div class="prt-toelichting">${q.toelichting}</div>` : ''}
@@ -535,7 +534,7 @@ window.GMRPrint = (() => {
 
     triggerPrint(`
       <div class="prt-body">
-        ${gmrHeader('Stakeholderoverzicht — GMR Biobased &amp; Circulaire Bouw')}
+        ${gmrHeader('Stakeholders')}
         <h2 class="prt-section-title" style="margin-top:18px">Alle stakeholders (${total})</h2>
         <p class="prt-intro"><strong>${interviewed} partijen geïnterviewd</strong> in april 2026 · ${total-interviewed} aanvullende stakeholders op basis van gepubliceerde bronnen.</p>
         ${sectionsHTML}
@@ -588,7 +587,7 @@ window.GMRPrint = (() => {
 
     triggerPrint(`
       <div class="prt-body">
-        ${gmrHeader('Beleidsimulator — Eindrapport')}
+        ${gmrHeader('Beleidsscenario')}
         <div class="prt-game-hero" style="margin-top:18px">
           <div class="prt-game-role">
             <div class="prt-game-role-label">Gespeeld als</div>
@@ -775,7 +774,7 @@ window.GMRPrint = (() => {
     // ── OUTPUT ───────────────────────────────────────────────
     triggerPrint(`
       <div class="prt-body">
-        ${gmrHeader('Strategisch Adviesrapport — Biobased &amp; Circulaire Bouw')}
+        ${gmrHeader('Adviesrapport')}
 
         <!-- TITELBLAD -->
         <div class="prt-advies-hero" style="margin-top:16px">
