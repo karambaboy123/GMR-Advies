@@ -549,44 +549,47 @@ const TRENDS = [
   },
   {
     id: 11,
-    titel: "Bewoners- en comfortvoordelen biobased wonen",
-    icon: "heart",
-    beschrijving: "Bewoners in biobased woningen rapporteren betere luchtkwaliteit, hogere thermische comfort en een aangenamere binnenomgeving door de hygroscopische eigenschappen van materialen als hennepbeton en hout. Deze voordelen zijn reëel maar spelen nu nog een beperkte rol in de investeringsbeslissingen van projectontwikkelaars en corporaties. Vraaggestuurd 'pull-effect' van bewoners kan dit op termijn omdraaien.",
-    impact: "laag",
-    tijdlijn: "kort",
+    titel: "Van vrijwillig naar verplicht — normalisering circulair bouwen",
+    icon: "gavel",
+    beschrijving: "De transitie naar circulair bouwen beweegt zich van vrijwilligheid naar normering. HNN is nu nog een adviesraamwerk, maar de richting is duidelijk: circulaire eisen worden verplicht onderdeel van aanbestedingen, gebiedsontwikkeling en het Bouwbesluit. Wie nu inzet op verankering loopt voor op wat over 3–5 jaar standaard is.",
+    impact: "hoog",
+    tijdlijn: "middellang",
     stat: [
-      { waarde: "300+", label: "Mensen op wachtlijst Strowijk Iewan (24 won.)" },
-      { waarde: "89%", label: "Bewonerstevredenheid biobased pilots NL (gem.)" },
-      { waarde: "50%", label: "Kopers noemt biobased géén doorslaggevend criterium" },
-      { waarde: "+12%", label: "Hogere verkoopprijs biobased woning koopsector" }
+      { waarde: "12", label: "HNN-maatregelcategorieën beschikbaar" },
+      { waarde: "2024", label: "Juridische toetsing HNN gereed" },
+      { waarde: "Vrijwillig", label: "Huidige status HNN" },
+      { waarde: "2030", label: "Doeljaar landelijke biobased bouwnorm" }
     ],
-    details: "<strong>Hygroscopische voordelen:</strong> Hennepbeton en hout reguleren actief de luchtvochtigheid in woningen, wat zorgt voor minder schimmelvorming en een stabieler binnenklimaat. Bewoners in de Strowijk Iewan-pilot (Talis) rapporteerden significant lagere stookkosten en betere slaapkwaliteit.<br><br><strong>Beperkte marktinvloed:</strong> Ondanks de aantoonbare leefvoordelen kiezen de meeste kopers en huurders niet primair op materiaalkenmerken — prijs, locatie en grootte zijn dominanter. Klokgroep (Thijs Pleijhuis): <em>'Onze kopers zijn bereid meer te betalen als het verhaal klopt, maar dat verhaal moet je actief vertellen.'</em><br><br><strong>Pull-effect groeit langzaam:</strong> In Denemarken en Zweden — waar biobased bouwen al langer is ingeburgerd — is bewuste vraag naar biobased woningen al substantieel. In Nederland staat dit nog in de kinderschoenen. Talis zag echter meer dan 300 mensen op de wachtlijst voor 24 biobased woningen — een indicatie dat latente vraag wel degelijk aanwezig is.<br><br><strong>Aanbeveling:</strong> Investeer in communicatie en storytelling rond biobased woonprojecten. Labels vergelijkbaar met energielabels kunnen de zichtbaarheid van biobased kwaliteit voor eindgebruikers vergroten.",
+    details: "<strong>Van advies naar norm:</strong> HNN biedt nu 12 maatregelcategorieën als vrijwillig raamwerk. De juridische toetsing (2024) bevestigt dat HNN-eisen rechtmatig kunnen worden opgenomen in aanbestedingen. Elke gemeente of corporatie die nu HNN structureel inbedt, positioneert zich vooruit op wat over 3–5 jaar landelijk verplicht wordt.<br><br><strong>Nationaal traject:</strong> De NABB-actielijn 6 richt zich op normering: biobased bouweisen opnemen in het Bouwbesluit vóór 2030. BZK beoogt dat 30% van de nieuwbouwwoningen in 2030 ≥30% biobased materiaalgebruik heeft. Dit traject verloopt via pilots in 'biobased voorloopgebieden' — de GMR heeft de positie en kennis om hierin koploper te worden.<br><br><strong>Risico: marktontwijking bij te snelle eisen:</strong> Klokgroep (Thijs Pleijhuis): <em>'Er is een grens — die ligt tussen zeven en twaalf procent meerkosten. Als je boven die grens uitkomt, bouwen partijen elders.'</em> Verankering moet dus samengaan met ondersteuning, subsidieregelingen en voldoende aanloopperiode voor marktpartijen.<br><br><strong>Aanbeveling:</strong> Maak HNN het standaardkader in alle regionale uitvragen. Start met de aanbestedingsfase — daar is de impact het grootst. Gebruik de Handreiking Aanbesteden met HNN als basisinstrument voor alle GMR-gemeenten.",
     bronnen: [
-      { label: "Interview Melany Thijssen — Talis Woningcorporatie (Strowijk Iewan)", bestand: "Interviews/Talis interview met Melany Thijssen Beleidsadviseur Duurzaamheid en Vastgoed.docx" },
-      { label: "Interview Thijs Pleijhuis — Klokgroep (kopers en draagvlak)", bestand: "Interviews/Interview 30 3 2026 T Pleijhuis Klokgroep.docx" },
-      { label: "Masterthesis adoptie biobased materialen — Wentholt", bestand: "Master Thesis Adoption of Biobased Building Materials Koen Wentholt s1044006 (1).pdf" },
-      { label: "GMR Onderzoek DOC 2: Empirie lopende biobased bouwprojecten", bestand: "2 Empirie lopende bbb projecten.docx" }
+      { label: "HNN Leidraad Nieuwbouw v1.2 — kernreferentie", bestand: "hnn-leidraad-nieuwbouw-1.2.pdf" },
+      { label: "Juridische toetsing HNN (definitief) — aanbestedingsrecht", bestand: "Juridische-toetsing-Het-Nieuwe-Normaal---definitief.pdf" },
+      { label: "Handreiking aanbesteden met HNN v1.0", bestand: "handreiking-aanbesteden-met-het-nieuwe-normaal-1.0.pdf" },
+      { label: "Advies aan het Rijk VRO 2024/2025 — normering biobased", bestand: "advies-aan-het-rijk-vro-20242025.pdf" },
+      { label: "Interview Myriam van Zetten — Provincie Gelderland (HNN)", bestand: "Interviews/Interview Myriam van Zetten.docx" },
+      { label: "Interview Thijs Pleijhuis — Klokgroep (marktontwijking)", bestand: "Interviews/Interview 30 3 2026 T Pleijhuis Klokgroep.docx" }
     ]
   },
   {
     id: 12,
-    titel: "Internationale benchmarks en EU-leernetwerken",
-    icon: "globe",
-    beschrijving: "Denemarken, Zweden en Oostenrijk lopen meerdere jaren voor op Nederland in massahoutbouw en biobased renovatie. Via Interreg, EU Green Deal en BUILD UP worden ervaringen gedeeld. Nederland kan grote stappen overslaan door bewezen buitenlandse aanpakken te kopiëren, maar de vertaalslag naar de GMR-context — inclusief ons grondbeleid en aanbestedingsrecht — is niet vanzelfsprekend.",
-    impact: "laag",
-    tijdlijn: "lang",
+    titel: "CO₂ als economische waarde — van milieubelasting naar financieel sturingsinstrument",
+    icon: "leaf",
+    beschrijving: "CO₂-opslag in biobased bouwmaterialen krijgt economische waarde via carbon credits, CO₂-labels en groene financiering. Een biobased woning slaat gemiddeld 8 ton CO₂ op — potentieel €3.500–6.000 per woning. De markt is onvolwassen maar 2026 is een kantelmoment: BZK herziet de MPG-methode en het climate credit-systeem maturiseert.",
+    impact: "hoog",
+    tijdlijn: "middellang",
     stat: [
-      { waarde: "45%", label: "Nieuwbouw in hout/biobased Denemarken (2023)" },
-      { waarde: "12%", label: "Houtbouwaandeel Nederland vs. 2% in 2015" },
-      { waarde: "€6,4B", label: "EU Green Deal budget circulaire bouwsector" },
-      { waarde: "5–10 jr", label: "Geschatte adoptie-achterstand NL t.o.v. Denemarken" }
+      { waarde: "€3.500–6.000", label: "Carbon credits per biobased woning" },
+      { waarde: "8 ton", label: "CO₂-opslag per biobased woning" },
+      { waarde: "Onvolwassen", label: "Huidige status carbonmarkt gebouwen" },
+      { waarde: "2026", label: "BZK-herziening MPG-rekenmethode" }
     ],
-    details: "<strong>Voorlopers in Europa:</strong> Denemarken stelt biobased/houtbouw als standaard voor gemeentelijke nieuwbouw. Zweden heeft een marktaandeel van ruim 40% voor prefab houtbouw. Oostenrijk heeft het grootste aandeel CLT-gebruik wereldwijd per capita. Wat hen onderscheidt: langdurig consistent beleid, gecombineerd met nationaal certificeringstelsel en fiscale prikkels.<br><br><strong>EU-kaders:</strong> De EU Green Deal Renovation Wave richt zich op verduurzaming van gebouwen, waarbij biobased materialen een prominente rol spelen. De herziene Construction Products Regulation (CPR, 2026) harmoniseert EPD-eisen en opent de Europese markt voor biobased bouwproducten. BUILD UP is het EU-kennisplatform voor energie- en biobased bouwtransitie.<br><br><strong>Beperkte directe relevantie GMR:</strong> Europese voorbeelden gelden als inspiratie en bewijsvoering voor beleid, maar de directe stuurbaarheid op GMR-niveau is laag. Grondbeleid, aanbestedingsrecht en woningcorporatiestructuur zijn in Nederland fundamenteel anders dan in Scandinavische landen. Copy-paste is niet mogelijk — lokale adaptatie is altijd nodig.<br><br><strong>Interreg-kansen:</strong> Via Interreg NWE (North-West Europe) zijn Gelderse gemeenten actief in grensoverschrijdende biobased projecten. Dit levert kennisuitwisseling op maar heeft een lange aanlooptijd voordat het in beleid vertaalt.",
+    details: "<strong>Biogene koolstofopslag:</strong> Biobased bouwmaterialen (hout, hennep, stro) binden CO₂ tijdens de groei en slaan dit op gedurende de levensduur van het gebouw. Per biobased woning gaat het om circa 8 ton CO₂ die decennialang gebonden blijft — een waarde die in de MPG-berekening nog onvoldoende wordt erkend. Climate Cleanup Protocol v1.0 biedt nu al €3.500–6.000 per woning als vergoeding voor biogene CO₂-opslag.<br><br><strong>Marktrijpheid en beleid:</strong> De carbon credits-markt voor gebouwen is nog onvolwassen. Verificatiekosten en het ontbreken van een erkende standaard maken het nu nog niet bankable. BAM (Tom Stolker): <em>'Over drie tot vijf jaar wordt dit een serieuze bijdrage — wij houden dit nauwgezet in de gaten.'</em> BZK heeft toegezegd de MPG-rekenmethodiek voor biobased CO₂-opslag vóór 2026 te herzien; een verlaging van de MPG-eis met 20% maakt biobased materialen automatisch concurrerend zonder directe subsidie.<br><br><strong>Risico: onvolwassen markt en discussie over betrouwbaarheid:</strong> Wie incasseert de credits — materiaalproducent, bouwer of gebouweigenaar? Building Balance werkt aan een sectorstandaard. Zolang deze vraag niet beantwoord is, blijft het moeilijk dit in aanbiedingen te verwerken. TNO berekende dat de Nederlandse nieuwbouwopgave tot 2030 bij volledig biobased uitvoering 10–15 megaton CO₂-equivalenten zou kunnen opslaan.<br><br><strong>Aanbeveling:</strong> Start een CO₂-label/carbon-creditpilot met GMR-corporaties en Rijksoverheid. Bouw databasis en rekenmethodiek op. Positioneer de GMR als testbedding voor de nationale bouwkoolstof-systematiek die BZK en EZK verkennen.",
     bronnen: [
-      { label: "Advies aan het Rijk IenW 2024/2025 — EU CPR en internationale context", bestand: "advies-aan-het-rijk-ienw-20242025.pdf" },
-      { label: "HNN Whitepaper CSRD — EU-rapportagekader en biobased", bestand: "HNN-Whitepaper-CSRD-web.pdf" },
-      { label: "DRIFT Rapport Staat van Transitie — internationale vergelijking", bestand: "DRIFT-Rapport-Staat-van-Transitie.pdf" },
-      { label: "Whitepaper GMR — internationale positionering", bestand: "Whitepaper GMR.pdf" }
+      { label: "Advies aan het Rijk VRO 2024/2025 — MPG & biobased CO₂", bestand: "advies-aan-het-rijk-vro-20242025.pdf" },
+      { label: "Advies aan het Rijk IenW 2024/2025 — carbon credits gebouwen", bestand: "advies-aan-het-rijk-ienw-20242025.pdf" },
+      { label: "Kennisdossier Building Balance — CO₂-opslag en paspoorten", bestand: "Kennisdossier Buidling Balance - proces en werkzijze dossiereigenaren.pdf" },
+      { label: "Interview Tom Stolker — BAM Wonen (carbon credits)", bestand: "Interviews/Interview 1 Tom Stolker 22-4.docx" },
+      { label: "GMR Onderzoek DOC 5: Vervallen MPG — gevolgenanalyse", bestand: "5. Vervallen MPG.docx" }
     ]
   }
 ];

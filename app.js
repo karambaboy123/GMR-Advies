@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
   NotulenTab.init(refreshIcons);
   GameTab.init(refreshIcons);
   DeskresearchTab.init(refreshIcons);
+  AdviesrapportTab.init(refreshIcons);
+  InzichtenTab.init(refreshIcons);
 
   // Initial icon render
   refreshIcons();

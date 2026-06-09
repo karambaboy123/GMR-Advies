@@ -3169,3 +3169,486 @@ abbr[title]:hover::before {
   color: #999;
   margin-top: 6px;
 }
+
+/* ============================================================
+   SIDEBAR — nav-divider & highlight buttons
+   ============================================================ */
+.nav-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 8px 16px;
+}
+.nav-btn-highlight {
+  background: rgba(42,146,152,0.12);
+  border-left: 2px solid #2A9298;
+}
+.nav-btn-highlight:hover,
+.nav-btn-highlight.active {
+  background: rgba(42,146,152,0.22);
+  border-left-color: #2A9298;
+}
+
+/* ============================================================
+   PAGE HEADER VARIANTEN
+   ============================================================ */
+.page-header-advies .page-header-badge    { background: rgba(42,146,152,.18); }
+.page-header-inzichten .page-header-badge { background: rgba(176,90,11,.18);  color: #B05A0B; }
+
+/* ============================================================
+   ADVIESRAPPORT — HERO
+   ============================================================ */
+.advies-hero {
+  background: linear-gradient(135deg, #0E4447 0%, #176064 60%, #2A9298 100%);
+  border-radius: 12px;
+  padding: 36px 40px 32px;
+  margin-bottom: 28px;
+  color: #fff;
+}
+.advies-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  margin-bottom: 12px;
+}
+.advies-hero-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.advies-hero-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,.75);
+  margin-bottom: 20px;
+}
+.advies-hero-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   ADVIESRAPPORT — CENTRALE BOODSCHAP
+   ============================================================ */
+.advies-central-message {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #EEF5F6;
+  border: 1.5px solid #2A9298;
+  border-left: 4px solid #2A9298;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 28px;
+}
+.acm-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  background: #2A9298;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+}
+.acm-icon svg, .acm-icon i { width: 16px; height: 16px; }
+.acm-label {
+  font-size: 10px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: #2A9298; margin-bottom: 4px;
+}
+.acm-text { font-size: 14px; line-height: 1.6; color: #0E4447; }
+.acm-body { flex: 1; }
+
+/* ============================================================
+   ADVIESRAPPORT — SECTIES
+   ============================================================ */
+.advies-section {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+.advies-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0E4447;
+  border-bottom: 2px solid #EEF5F6;
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+.advies-section-header svg,
+.advies-section-header i { color: #2A9298; width: 16px; height: 16px; }
+
+/* ============================================================
+   ADVIESRAPPORT — MANAGEMENTSAMENVATTING
+   ============================================================ */
+.advies-summary-block { line-height: 1.7; color: #155558; }
+.advies-summary-block p { margin-bottom: 14px; font-size: 14px; }
+.advies-summary-advieslijn {
+  display: flex; gap: 10px; align-items: flex-start;
+  background: #EEF5F6; border-radius: 8px;
+  padding: 14px 16px; margin-top: 8px;
+  font-size: 14px; color: #0E4447; line-height: 1.55;
+}
+
+/* ============================================================
+   ADVIESRAPPORT — KERNCONCLUSIES GRID
+   ============================================================ */
+.advies-findings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.advies-finding-card {
+  background: #FAFEFE;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 18px 20px;
+  transition: var(--transition);
+}
+.advies-finding-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+.afc-top {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+}
+.afc-icon {
+  width: 34px; height: 34px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.afc-icon svg, .afc-icon i { width: 15px; height: 15px; }
+.afc-num {
+  font-size: 11px; font-weight: 700; color: #999;
+  margin-left: auto; letter-spacing: .04em;
+}
+.afc-titel { font-size: 13.5px; font-weight: 700; color: #0E4447; margin-bottom: 8px; }
+.afc-tekst { font-size: 12.5px; line-height: 1.6; color: #3D8288; }
+
+/* ============================================================
+   ADVIESRAPPORT — TREND TABEL
+   ============================================================ */
+.advies-trend-tabel {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.att-header {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1.4fr;
+  background: #0E4447;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  gap: 16px;
+}
+.att-row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1.4fr;
+  padding: 11px 16px;
+  gap: 16px;
+  border-bottom: 1px solid #EEF5F6;
+  font-size: 13px;
+  line-height: 1.5;
+  align-items: start;
+}
+.att-even { background: #FAFEFE; }
+.att-row:last-child { border-bottom: none; }
+.att-trend { font-weight: 600; color: #0E4447; }
+.att-betekenis { color: #155558; }
+.att-implicatie { color: #2A9298; font-style: italic; }
+
+/* ============================================================
+   ADVIESRAPPORT — KNELPUNTEN GRID
+   ============================================================ */
+.advies-problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+.advies-problem-card {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: #FAFEFE; border-radius: 10px;
+  border: 1px solid var(--border); padding: 16px 18px;
+}
+.apc-num {
+  font-size: 28px; font-weight: 800; color: #EEF5F6;
+  line-height: 1; flex-shrink: 0; min-width: 28px;
+  font-variant-numeric: tabular-nums;
+}
+.apc-body { flex: 1; }
+.apc-icon-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+.apc-titel { font-size: 13.5px; font-weight: 700; color: #0E4447; }
+.apc-tekst { font-size: 12.5px; line-height: 1.6; color: #3D8288; }
+
+/* ============================================================
+   ADVIESRAPPORT — STRATEGISCHE ADVIEZEN
+   ============================================================ */
+.advies-advice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.advies-advice-card {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: linear-gradient(145deg, #FAFEFE 0%, #EEF5F6 100%);
+  border-radius: 10px; border: 1px solid var(--border);
+  padding: 18px 20px;
+  transition: var(--transition);
+}
+.advies-advice-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+.aac-num {
+  font-size: 30px; font-weight: 800; color: rgba(42,146,152,.2);
+  line-height: 1; flex-shrink: 0; min-width: 24px;
+  font-variant-numeric: tabular-nums;
+}
+.aac-body { flex: 1; }
+.aac-icon {
+  width: 30px; height: 30px; background: #2A9298;
+  border-radius: 7px; display: flex; align-items: center;
+  justify-content: center; color: #fff; margin-bottom: 10px;
+}
+.aac-icon svg, .aac-icon i { width: 14px; height: 14px; }
+.aac-titel { font-size: 13.5px; font-weight: 700; color: #0E4447; margin-bottom: 7px; }
+.aac-tekst { font-size: 12.5px; line-height: 1.6; color: #3D8288; margin-bottom: 10px; }
+.aac-actie {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 11.5px; font-weight: 600; color: #2A9298;
+  background: rgba(42,146,152,.08);
+  padding: 5px 8px; border-radius: 5px;
+}
+.aac-actie svg, .aac-actie i { color: #2A9298; }
+
+/* ============================================================
+   ADVIESRAPPORT — ROADMAP
+   ============================================================ */
+.advies-roadmap { display: flex; flex-direction: column; gap: 0; }
+.arm-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding-bottom: 24px;
+}
+.arm-left {
+  display: flex; flex-direction: column;
+  align-items: center; flex-shrink: 0; width: 64px;
+}
+.arm-year-badge {
+  background: #0E4447; color: #fff;
+  font-size: 13px; font-weight: 700;
+  border-radius: 20px; padding: 5px 12px;
+  white-space: nowrap; z-index: 1;
+}
+.arm-now .arm-year-badge  { background: #2A9298; box-shadow: 0 0 0 3px rgba(42,146,152,.3); }
+.arm-goal .arm-year-badge { background: linear-gradient(135deg,#176064,#2A9298); }
+.arm-connector-line {
+  width: 2px; flex: 1; min-height: 20px;
+  background: linear-gradient(to bottom, #0E4447, #B5D4D6);
+  margin: 2px 0;
+}
+.arm-content {
+  flex: 1; background: #FAFEFE;
+  border-radius: 10px; border: 1px solid var(--border);
+  padding: 14px 18px;
+}
+.arm-titel { font-size: 14px; font-weight: 700; color: #0E4447; margin-bottom: 8px; }
+.arm-punten { list-style: none; padding: 0; margin: 0; }
+.arm-punten li {
+  display: flex; align-items: flex-start; gap: 7px;
+  font-size: 12.5px; color: #3D8288; line-height: 1.5;
+  padding: 2px 0;
+}
+.arm-punten li::before {
+  content: '→';
+  color: #2A9298; font-weight: 700;
+  flex-shrink: 0; margin-top: 1px;
+}
+.arm-now .arm-content  { border-color: #2A9298; }
+.arm-goal .arm-content { border-color: #176064; background: linear-gradient(145deg,#EEF5F6,#fff); }
+
+/* ============================================================
+   ADVIESRAPPORT — CONCLUSIE & FOOTER
+   ============================================================ */
+.advies-conclusion-block {
+  background: linear-gradient(135deg,#EEF5F6,#fff);
+  border: 1.5px solid #2A9298;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+.advies-conclusion-inner {
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.advies-conclusion-inner > div { flex: 1; }
+.advies-conclusion-inner strong { display: block; font-size: 14px; color: #0E4447; margin-bottom: 6px; }
+.advies-conclusion-inner p { font-size: 13.5px; line-height: 1.65; color: #155558; }
+
+.advies-footer {
+  background: #0E4447; border-radius: 10px;
+  padding: 18px 24px; margin-bottom: 24px;
+}
+.advies-footer-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+  font-size: 12px; color: rgba(255,255,255,.7);
+}
+
+/* ============================================================
+   INZICHTEN — HERO
+   ============================================================ */
+.inz-hero {
+  background: linear-gradient(135deg, #0E4447 0%, #B05A0B 100%);
+  border-radius: 12px;
+  padding: 34px 40px 30px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+.inz-hero-eyebrow {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: rgba(255,255,255,.7);
+  margin-bottom: 10px;
+}
+.inz-hero-title {
+  font-size: 26px; font-weight: 800; margin-bottom: 8px; color: #fff;
+}
+.inz-hero-sub {
+  font-size: 13.5px; color: rgba(255,255,255,.8); line-height: 1.5;
+  max-width: 640px;
+}
+
+/* ============================================================
+   INZICHTEN — CENTRALE BOODSCHAP
+   ============================================================ */
+.inz-central-message {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: #FFF6EE; border: 1.5px solid #E07B00;
+  border-left: 4px solid #E07B00; border-radius: 10px;
+  padding: 18px 22px; margin-bottom: 20px;
+}
+.inz-cm-icon {
+  width: 34px; height: 34px; flex-shrink: 0;
+  background: #E07B00; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; color: #fff;
+}
+.inz-cm-icon svg, .inz-cm-icon i { width: 15px; height: 15px; }
+.inz-cm-body { flex: 1; }
+.inz-cm-label {
+  font-size: 10px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: #E07B00; margin-bottom: 4px;
+}
+.inz-cm-text { font-size: 13.5px; line-height: 1.6; color: #5A3800; }
+
+/* ============================================================
+   INZICHTEN — CATEGORIE TAGS
+   ============================================================ */
+.inz-cats {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+}
+.inz-cat-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11.5px; font-weight: 600;
+  border: 1.5px solid; border-radius: 20px;
+  padding: 3px 10px;
+}
+.inz-cat-count {
+  display: inline-block; color: #fff; font-size: 10px;
+  font-weight: 700; border-radius: 10px;
+  padding: 1px 6px; line-height: 1.4;
+}
+
+/* ============================================================
+   INZICHTEN — KAARTEN GRID
+   ============================================================ */
+.inz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.inz-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--inz-accent, #2A9298);
+  padding: 20px;
+  transition: var(--transition);
+  display: flex; flex-direction: column;
+}
+.inz-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+.inz-card-top {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
+}
+.inz-card-num {
+  width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 800; flex-shrink: 0;
+}
+.inz-card-icon { margin-left: auto; }
+.inz-card-icon svg, .inz-card-icon i { width: 18px; height: 18px; }
+.inz-card-cat {
+  font-size: 10px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; padding: 2px 7px; border-radius: 10px;
+}
+.inz-card-titel {
+  font-size: 14px; font-weight: 700; color: #0E4447;
+  line-height: 1.3; margin-bottom: 8px;
+}
+.inz-card-beschrijving {
+  font-size: 12.5px; line-height: 1.65; color: #3D8288;
+  flex: 1; margin-bottom: 14px;
+}
+.inz-card-actie {
+  background: #EEF5F6; border-radius: 8px; padding: 10px 12px;
+  margin-top: auto;
+}
+.inz-card-actie-label {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 10px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: #2A9298; margin-bottom: 4px;
+}
+.inz-card-actie-label svg, .inz-card-actie-label i { color: #2A9298; }
+.inz-card-actie-text {
+  font-size: 12px; line-height: 1.5; color: #155558; font-weight: 500;
+}
+
+/* ============================================================
+   INZICHTEN — SLOTBOODSCHAP
+   ============================================================ */
+.inz-conclusion {
+  background: linear-gradient(135deg, #0E4447, #176064);
+  border-radius: 12px; padding: 24px 28px;
+  margin-bottom: 24px; color: #fff;
+}
+.inz-conclusion-inner { display: flex; gap: 16px; align-items: flex-start; }
+.inz-conclusion-inner > div { flex: 1; }
+.inz-conclusion-inner strong { display: block; font-size: 14px; color: #fff; margin-bottom: 6px; }
+.inz-conclusion-inner p { font-size: 13.5px; line-height: 1.65; color: rgba(255,255,255,.85); }
+
+/* ============================================================
+   RESPONSIVE AANPASSINGEN
+   ============================================================ */
+@media (max-width: 900px) {
+  .advies-findings-grid,
+  .advies-problems-grid,
+  .advies-advice-grid,
+  .inz-grid {
+    grid-template-columns: 1fr;
+  }
+  .att-header, .att-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .att-header span:not(:first-child),
+  .att-row span:not(:first-child) { padding-left: 8px; }
+  .advies-hero, .inz-hero { padding: 24px 20px; }
+  .advies-section { padding: 20px; }
+  .advies-footer-inner { flex-direction: column; align-items: flex-start; }
+}
