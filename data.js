@@ -860,6 +860,13 @@ const GAME_ROLES = [
     icon: "home",
     beschrijving: "Als woningcorporatie stuur je via het MJOP, aanbestedingseisen en samenwerking met gemeenten op circulaire nieuwbouw en renovatie.",
     kleur: "#0E4447"
+  },
+  {
+    id: "bouwboer",
+    naam: "Bouwboer / Agrariër",
+    icon: "wheat",
+    beschrijving: "Als bouwboer verbouw je biobased gewassen — hennep, vlas, miscanthus of stro — voor de bouwketen. Jij bent de basis van de biobased transitie: zonder regionaal grondstoffen­aanbod geen biobased bouw.",
+    kleur: "#5A8A2A"
   }
 ];
 
@@ -1165,7 +1172,8 @@ const GAME_ROLE_INIT = {
   gemeente:  { politiek: 50, markt: 30, budget: 60, samenwerking: 40 },
   provincie: { politiek: 65, markt: 35, budget: 75, samenwerking: 50 },
   aannemer:  { politiek: 25, markt: 65, budget: 50, samenwerking: 38 },
-  corporatie:{ politiek: 40, markt: 35, budget: 38, samenwerking: 48 }
+  corporatie:{ politiek: 40, markt: 35, budget: 38, samenwerking: 48 },
+  bouwboer:  { politiek: 15, markt: 50, budget: 42, samenwerking: 28 }
 };
 
 // ============================================================

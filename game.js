@@ -246,7 +246,7 @@ const GameTab = (() => {
         <div class="game-intro-features">
           <div class="gif-item">
             <div class="gif-icon"><i data-lucide="users"></i></div>
-            <span>Kies uw rol: gemeente, provincie, aannemer of corporatie</span>
+            <span>Kies uw rol: gemeente, provincie, aannemer, corporatie of bouwboer</span>
           </div>
           <div class="gif-item">
             <div class="gif-icon"><i data-lucide="git-branch"></i></div>
@@ -673,7 +673,7 @@ const GameTab = (() => {
   function networkSVG(samenwerking, politiek, markt) {
     const W = 420, H = 270, cx = W / 2, cy = H / 2 + 10, R = 95;
 
-    const roleIndex = { gemeente: 0, provincie: 1, aannemer: 2, corporatie: 3 };
+    const roleIndex = { gemeente: 0, provincie: 1, aannemer: 2, corporatie: 3, bouwboer: 4 };
     const myIdx = roleIndex[selectedRole] ?? -1;
 
     const nodes = [
@@ -681,7 +681,7 @@ const GameTab = (() => {
       { label: 'Provincie',  angle: -18 },
       { label: 'Aannemer',   angle:  54 },
       { label: 'Corporatie', angle: 126 },
-      { label: 'Boer/Keten', angle: 198 },
+      { label: 'Bouwboer',   angle: 198 },
     ].map((n, i) => ({
       ...n, i,
       x: cx + R * Math.cos(n.angle * Math.PI / 180),

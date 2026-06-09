@@ -16,73 +16,73 @@ const GAME_ROUND_ENRICHMENTS = {
   // ---- GEMEENTE ----
   g1a: {
     effecten: { politiek: +15, markt: +10, budget: -5, samenwerking: +5 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Grondpolitiek als hefboom is een slimme zet. Wij bouwen liever op gemeentegrond mét biobased eis dan op privaat terrein zonder. Het geeft ons projectzekerheid.", sentiment: "positief" },
     triggerEvent: null
   },
   g1b: {
     effecten: { politiek: +20, markt: +5, budget: -10, samenwerking: -5 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "HNN verplicht in aanbestedingen — dat is een stevige keuze. Wij kunnen het aan, maar kleine aannemers haken mogelijk af. De markt is er nog niet helemaal klaar voor.", sentiment: "kritisch" },
     triggerEvent: null
   },
   g1c: {
     effecten: { politiek: +5, markt: +20, budget: -20, samenwerking: +15 },
-    reactie: { naam: "Melany Thijssen", org: "Talis Woningcorporatie", icon: "home",
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
       tekst: "Deze subsidieregeling brengt biobased echt binnen bereik voor ons. Wij hebben al 3 projecten klaar staan. Eindelijk een gemeente die de meerkosten serieus neemt.", sentiment: "positief" },
     triggerEvent: null
   },
   g2a: {
     effecten: { politiek: +10, markt: +15, budget: -5, samenwerking: +20 },
-    reactie: { naam: "Melany Thijssen", org: "Talis Woningcorporatie", icon: "home",
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
       tekst: "Samen met de gemeente als tandem — dat is hoe het moet werken. Talis committeert 200 biobased huurwoningen. We weten nu dat er vraag is én dat er grond beschikbaar is.", sentiment: "positief" },
     triggerEvent: null
   },
   g2b: {
     effecten: { politiek: +5, markt: +20, budget: -10, samenwerking: +15 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Het faciliteren van typegoedkeuringen is precies wat we nodig hadden. Elk volgend Flow-project gaat nu drie maanden sneller. Dit is een gamechanger.", sentiment: "positief" },
     triggerEvent: null
   },
   g2c: {
     effecten: { politiek: +15, markt: +5, budget: 0, samenwerking: +10 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Goed dat u dit bij de provincie agendeert. Als HNN in de omgevingsverordening komt, hoeft niet elke gemeente het wiel opnieuw uit te vinden. Verwacht wel enige weerstand van collegagemeenten.", sentiment: "neutraal" },
     triggerEvent: null
   },
   g3a: {
     effecten: { politiek: -5, markt: +10, budget: -15, samenwerking: +5 },
-    reactie: { naam: "Thijs Pleijhuis", org: "Klokgroep", icon: "building-2",
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
       tekst: "De grondprijskorting lost het probleem op voor dit project, maar u heeft nu een precedent geschapen. Andere ontwikkelaars zullen ook korting vragen. Dat drukt uw positie.", sentiment: "kritisch" },
     triggerEvent: null
   },
   g3b: {
     effecten: { politiek: +10, markt: -10, budget: 0, samenwerking: -10 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Wij nemen het project over. U houdt de lijn — dat is principieel sterk. Korte vertraging, maar op de lange termijn versterkt u uw onderhandelingspositie enorm.", sentiment: "positief" },
     triggerEvent: "juridisch_bezwaar"
   },
   g3c: {
     effecten: { politiek: +5, markt: +5, budget: -5, samenwerking: +10 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Pragmatisch. Het leerdocument dat u vraagt is waardevol voor de hele GMR. Maar wees eerlijk: 50% biobased is niet de norm die we nastreven. Volgende project terug naar 100%.", sentiment: "neutraal" },
     triggerEvent: null
   },
   g4a: {
     effecten: { politiek: +20, markt: +10, budget: -5, samenwerking: +5 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Dit raadsvoorstel is het signaal dat de markt nodig had. Als HNN raadsbeleid is, weten aannemers dat biobased niet meer optioneel is. De GMR loopt nu voor op het Rijk.", sentiment: "positief" },
     triggerEvent: null
   },
   g4b: {
     effecten: { politiek: +15, markt: +15, budget: 0, samenwerking: +10 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "MPG als gunningscriterium is subtiel maar dodelijk effectief. Wij scoren structureel beter dan concurrenten op dit criterium. Biobased bouwen wordt zo de rationele keuze.", sentiment: "positief" },
     triggerEvent: null
   },
   g4c: {
     effecten: { politiek: +10, markt: +20, budget: -10, samenwerking: +25 },
-    reactie: { naam: "Thijs Pleijhuis", org: "Klokgroep", icon: "building-2",
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
       tekst: "Met vijf gemeenten die gezamenlijk inkopen worden biobased materialen ineens 15–20% goedkoper. Dat haalt de laatste drempel weg. Klokgroep gaat alle GMR-projecten van 2027 biobased offreren.", sentiment: "positief" },
     triggerEvent: "coalitie_versnelling"
   },
@@ -90,73 +90,73 @@ const GAME_ROUND_ENRICHMENTS = {
   // ---- PROVINCIE ----
   p1a: {
     effecten: { politiek: +25, markt: +5, budget: -5, samenwerking: -10 },
-    reactie: { naam: "Wethouder (fictief)", org: "Gemeente Zevenaar", icon: "building-2",
+    reactie: { naam: "Gemeente", org: "Sceptische gemeente", icon: "building-2",
       tekst: "Dit gaat ons te snel. De omgevingsverordening als dwanginstrument — gemeenten zijn niet klaar voor deze meerkosten. Wij overwegen bezwaar.", sentiment: "kritisch" },
     triggerEvent: null
   },
   p1b: {
     effecten: { politiek: +10, markt: +20, budget: -25, samenwerking: +20 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "De subsidieregeling met de kennisdeling-eis is precies de juiste combinatie. Wij dienen direct een aanvraag in voor onze Flow-woningen. De kennisbank gaat de sector versnellen.", sentiment: "positief" },
     triggerEvent: "RVO_subsidie"
   },
   p1c: {
     effecten: { politiek: +10, markt: +25, budget: -15, samenwerking: +25 },
-    reactie: { naam: "Melany Thijssen", org: "Talis Woningcorporatie", icon: "home",
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
       tekst: "Dit ketenmodel is exact wat ontbrak. Als boeren, verwerkers en bouwers contractueel verbonden zijn, is leveringszekerheid geen probleem meer. Talis stapt in als eerste afnemer.", sentiment: "positief" },
     triggerEvent: null
   },
   p2a: {
     effecten: { politiek: +5, markt: +10, budget: -10, samenwerking: +20 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "De training voor ambtenaren maakt echt verschil. Onze mensen merken dat vergunninggesprekken nu anders verlopen — meer begrip voor wat biobased inhoudt, minder onnodige discussies.", sentiment: "positief" },
     triggerEvent: null
   },
   p2b: {
     effecten: { politiek: +10, markt: +5, budget: -10, samenwerking: +15 },
-    reactie: { naam: "Thijs Pleijhuis", org: "Klokgroep", icon: "building-2",
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
       tekst: "De juridische helpdesk is een opluchting. Gemeenten durfden eerder geen biobased eisen te stellen uit angst voor bezwaren. Nu kunnen ze het — en ons ook. Bezwaarprocedures zijn met 60% gedaald.", sentiment: "positief" },
     triggerEvent: null
   },
   p2c: {
     effecten: { politiek: +10, markt: +10, budget: -10, samenwerking: +15 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Materialenpaspoorten als voorwaarde voor cofinanciering is een slimme zet: we bouwen nu al de data-infrastructuur op die over 30 jaar nodig is. BZK heeft hier extra interesse in getoond.", sentiment: "positief" },
     triggerEvent: null
   },
   p3a: {
     effecten: { politiek: +5, markt: +15, budget: -25, samenwerking: +15 },
-    reactie: { naam: "Wethouder (fictief)", org: "Gemeente Montferland", icon: "building-2",
+    reactie: { naam: "Gemeente", org: "Terughoudende gemeente", icon: "building-2",
       tekst: "Met de aanvullende subsidie kunnen we het toch aan. De eerste drie projecten worden biobased. Daarna moeten we zien of de businesscase op eigen kracht werkt.", sentiment: "neutraal" },
     triggerEvent: null
   },
   p3b: {
     effecten: { politiek: +15, markt: -5, budget: -5, samenwerking: -15 },
-    reactie: { naam: "Wethouder (fictief)", org: "Gemeente Renkum", icon: "building-2",
+    reactie: { naam: "Gemeente", org: "Weigerachtige gemeente", icon: "building-2",
       tekst: "U dwingt ons. Wij gaan mee omdat we geen keus hebben, maar dit voelt niet als partnerschap. Als de samenwerking zo begint, is het moeilijk om later gezamenlijk voortgang te boeken.", sentiment: "kritisch" },
     triggerEvent: "juridisch_bezwaar"
   },
   p3c: {
     effecten: { politiek: +10, markt: +10, budget: -5, samenwerking: +25 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Het leernetwerk was verrassend effectief. Zodra gemeenten zagen wat buurgemeenten bereikten, wilden ze ook meedoen. Peer pressure werkt beter dan provinciale dwang.", sentiment: "positief" },
     triggerEvent: null
   },
   p4a: {
     effecten: { politiek: +25, markt: +10, budget: -5, samenwerking: +15 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Als de GWPa-eis terugkomt in het Bouwbesluit, wordt de biobased businesscase automatisch beter. Wij hoeven dan niet meer uit te leggen waarom biobased het waard is — het staat gewoon in de wet.", sentiment: "positief" },
     triggerEvent: null
   },
   p4b: {
     effecten: { politiek: +15, markt: +25, budget: -20, samenwerking: +20 },
-    reactie: { naam: "Thijs Pleijhuis", org: "Klokgroep", icon: "building-2",
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
       tekst: "Het nationale showcase-project trekt kopers en bouwers van over het hele land. Klokgroep heeft al drie delegaties ontvangen. Dit is precies de zichtbaarheid die biobased bouw nodig had.", sentiment: "positief" },
     triggerEvent: "landelijke_media"
   },
   p4c: {
     effecten: { politiek: +20, markt: +15, budget: -5, samenwerking: +10 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "De GMR-norm van 40% geeft marktpartijen de zekerheid die ze nodig hebben om te investeren. BZK heeft ons al gebeld — ze willen dit als blauwdruk gebruiken voor de nationale norm.", sentiment: "positief" },
     triggerEvent: null
   },
@@ -164,73 +164,73 @@ const GAME_ROUND_ENRICHMENTS = {
   // ---- AANNEMER ----
   a1a: {
     effecten: { politiek: +5, markt: +20, budget: -20, samenwerking: +10 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Een nationaal goedgekeurd typegoedkeuring is precies wat gemeenten nodig hebben om snel te kunnen handelen. Gelderland geeft voorrang bij vergunningen voor uw gecertificeerde concept.", sentiment: "positief" },
     triggerEvent: null
   },
   a1b: {
     effecten: { politiek: +5, markt: +15, budget: -15, samenwerking: +15 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "Vier pilotwoningen — dat is hoe wij ook begonnen. Klein beginnen, fouten maken op kleine schaal, dan opschalen. Uw team zal dingen leren die geen training kan bijbrengen.", sentiment: "positief" },
     triggerEvent: null
   },
   a1c: {
     effecten: { politiek: +5, markt: +10, budget: -10, samenwerking: +20 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "Het sociale aspect is het belangrijkste. Als uw bouwteam enthousiast is, ziet u dat terug in de kwaliteit van het werk. Wij trainen ook intern — dit is de investering die telt.", sentiment: "positief" },
     triggerEvent: null
   },
   a2a: {
     effecten: { politiek: +5, markt: +15, budget: +10, samenwerking: +20 },
-    reactie: { naam: "Melany Thijssen", org: "Talis Woningcorporatie", icon: "home",
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
       tekst: "Eindelijk een aannemer die begrijpt dat wij als corporatie lange-termijndenken nodig hebben. Dit pilotcomplex van 24 woningen geeft ons de data om biobased structureel in ons MJOP op te nemen.", sentiment: "positief" },
     triggerEvent: null
   },
   a2b: {
     effecten: { politiek: +15, markt: +10, budget: +5, samenwerking: +15 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "De biobased sporthal in Nijmegen is een perfecte showcase voor HNN in de praktijk. De gemeente maakt uw kosten transparant — dat leert de hele sector wat biobased écht kost.", sentiment: "positief" },
     triggerEvent: null
   },
   a2c: {
     effecten: { politiek: 0, markt: +20, budget: +20, samenwerking: +5 },
-    reactie: { naam: "Thijs Pleijhuis", org: "Klokgroep", icon: "building-2",
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
       tekst: "De koopsector heeft bewuste kopers die biobased waarderen. Wij doen hetzelfde met Klokgroep Wanrooij. De marge is beter dan sociale huur, maar de klant moet het verhaal snappen.", sentiment: "neutraal" },
     triggerEvent: null
   },
   a3a: {
     effecten: { politiek: +10, markt: +15, budget: -20, samenwerking: +20 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Wij doen graag mee aan het nationaal testrapport. Als dit sectorbreed gedeeld wordt, verdienen we de investering 10x terug in bespaarde vergunningdiscussies. Neem contact op.", sentiment: "positief" },
     triggerEvent: null
   },
   a3b: {
     effecten: { politiek: 0, markt: +5, budget: -5, samenwerking: +5 },
-    reactie: { naam: "Melany Thijssen", org: "Talis Woningcorporatie", icon: "home",
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
       tekst: "Elke keer opnieuw onderhandelen met de brandweer kost u tijd die u niet heeft. Dit lost het probleem op voor dit project — maar het volgend jaar heeft u hetzelfde probleem.", sentiment: "kritisch" },
     triggerEvent: null
   },
   a3c: {
     effecten: { politiek: 0, markt: +10, budget: +5, samenwerking: +10 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "Hybride is soms de enige optie. Wij hebben het ook gedaan op moeilijke locaties. Zorg dat u de lessen documenteert — zodat de volgende aannemer dit niet ook hoeft te doen.", sentiment: "neutraal" },
     triggerEvent: null
   },
   a4a: {
     effecten: { politiek: +5, markt: +30, budget: +15, samenwerking: +10 },
-    reactie: { naam: "Thijs Pleijhuis", org: "Klokgroep", icon: "building-2",
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
       tekst: "Seriebouw is het antwoord. Als u 100 biobased woningen per jaar bouwt, dalen de kosten radicaal en raakt de hele sector gewend aan uw systemen. Klokgroep wil uw eerste klant zijn.", sentiment: "positief" },
     triggerEvent: "vakmanschapstekort"
   },
   a4b: {
     effecten: { politiek: +10, markt: +20, budget: -15, samenwerking: +15 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Uw MPG-voordeel via LCA maakt een enorm verschil bij provinciale aanbestedingen. Als biobased concepten 40% beter scoren, winnen ze automatisch. Dit is een structurele marktvoordeel.", sentiment: "positief" },
     triggerEvent: null
   },
   a4c: {
     effecten: { politiek: +5, markt: +20, budget: +25, samenwerking: +15 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Carbon credits als inkomstenstroom — dát is de doorbraak in de businesscase. Als €3.500–6.000 per woning structureel terugvloeit, zijn de meerkosten van biobased volledig gedekt.", sentiment: "positief" },
     triggerEvent: null
   },
@@ -238,73 +238,73 @@ const GAME_ROUND_ENRICHMENTS = {
   // ---- CORPORATIE ----
   c1a: {
     effecten: { politiek: +10, markt: +10, budget: -10, samenwerking: +15 },
-    reactie: { naam: "Melany Thijssen", org: "Talis Woningcorporatie", icon: "home",
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
       tekst: "Biobased verankeren in het MJOP is de sleutelstap. Zodra het in de planningscyclus zit, stopt het 'extra-inspanning'-gevoel. Het wordt dan gewoon hoe u bouwt.", sentiment: "positief" },
     triggerEvent: null
   },
   c1b: {
     effecten: { politiek: +5, markt: +15, budget: +20, samenwerking: +10 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "MIA/Vamil optimaal benutten is slim. Dat 36% investeringsaftrek maakt biobased direct financieel haalbaar voor corporaties. Wij adviseren ook de andere GMR-corporaties dit te doen.", sentiment: "positief" },
     triggerEvent: null
   },
   c1c: {
     effecten: { politiek: +15, markt: +20, budget: -20, samenwerking: +15 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Uw pilotcomplex haalt nationale media. Wij krijgen al vragen van drie gemeenten die een vergelijkbaar project willen. U heeft de sector een dienst bewezen.", sentiment: "positief" },
     triggerEvent: "landelijke_media"
   },
   c2a: {
     effecten: { politiek: +15, markt: +10, budget: +10, samenwerking: +20 },
-    reactie: { naam: "Thijs Pleijhuis", org: "Klokgroep", icon: "building-2",
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
       tekst: "Gemeente en corporatie als tandem — grond + vergunningsprioriteit gecombineerd met langjarig afname-commitment. Dit is het model dat de markt beweegt.", sentiment: "positief" },
     triggerEvent: null
   },
   c2b: {
     effecten: { politiek: +5, markt: +15, budget: +20, samenwerking: +25 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "Een inkoopcoalitie van vier corporaties — dat is het volume dat wij als bouwer nodig hebben om te investeren in biobased productiecapaciteit. Dat 22% prijsdaling is nog conservatief.", sentiment: "positief" },
     triggerEvent: "corporatie_coalitie"
   },
   c2c: {
     effecten: { politiek: +5, markt: +20, budget: -10, samenwerking: +25 },
-    reactie: { naam: "Melany Thijssen", org: "Talis Woningcorporatie", icon: "home",
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
       tekst: "Ketenregie is complex maar krachtig. Als u als corporatie de schakel vormt tussen boer en bouwer, heeft u unieke controle over kwaliteit én prijs. Talis doet dit ook bij Strowijk.", sentiment: "positief" },
     triggerEvent: null
   },
   c3a: {
     effecten: { politiek: +5, markt: +10, budget: -5, samenwerking: +10 },
-    reactie: { naam: "Melany Thijssen", org: "Talis Woningcorporatie", icon: "home",
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
       tekst: "De communicatiecampagne heeft de ergste druk weggenomen. Maar 30% van de bewoners is nog sceptisch. Onderbouw uw verhaal met harde cijfers bij de volgende gelegenheid.", sentiment: "neutraal" },
     triggerEvent: null
   },
   c3b: {
     effecten: { politiek: +10, markt: +15, budget: -10, samenwerking: +15 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Uw onafhankelijke terugverdientermijn-rapport wordt nationaal geciteerd. BZK gebruikt het als bewijs dat biobased ook voor sociale huur financieel haalbaar is. Uitstekend werk.", sentiment: "positief" },
     triggerEvent: "kennisdeling_effect"
   },
   c3c: {
     effecten: { politiek: +10, markt: +10, budget: -15, samenwerking: +15 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "Een prestatiegarantie aan bewoners — dat is echt commitment. Het dwingt u en ons als bouwer om biobased goed te laten werken. We accepteren de uitdaging.", sentiment: "neutraal" },
     triggerEvent: null
   },
   c4a: {
     effecten: { politiek: +15, markt: +10, budget: -5, samenwerking: +20 },
-    reactie: { naam: "Thijs Pleijhuis", org: "Klokgroep", icon: "building-2",
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
       tekst: "Biobased in de prestatieafspraken verankerd — dat is publiek en afdwingbaar. Als corporaties dit breed uitrollen, is er structurele vraag voor biobased bouwers. Klokgroep gaat ook lobbyen bij de gemeenten.", sentiment: "positief" },
     triggerEvent: null
   },
   c4b: {
     effecten: { politiek: +10, markt: +10, budget: -10, samenwerking: +15 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Materialenpaspoorten zijn de toekomst. Als uw portefeuille straks goed gedocumenteerd is, zijn de materialen bij renovatie of sloop rechtstreeks herbruikbaar. Dit is echte circulariteit.", sentiment: "positief" },
     triggerEvent: null
   },
   c4c: {
     effecten: { politiek: +10, markt: +15, budget: -5, samenwerking: +10 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Een openbare CO₂-analyse is CSRD-klaar én een krachtig communicatiemiddel. Als iedereen ziet wat biobased oplevert in CO₂-reductie, versterkt dat het draagvlak enorm.", sentiment: "positief" },
     triggerEvent: null
   },
@@ -312,25 +312,25 @@ const GAME_ROUND_ENRICHMENTS = {
   // ---- GEMEENTE extra (4e opties) ----
   g1d: {
     effecten: { politiek: +10, markt: +15, budget: -10, samenwerking: +10 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "Eindelijk een gemeente die begrijpt dat snelheid geld is. Wij hebben drie projecten klaarstaan die we wilden indienen maar de doorlooptijd hield ons tegen. Met dit loket gaan we direct van start.", sentiment: "positief" },
     triggerEvent: null
   },
   g2d: {
     effecten: { politiek: +15, markt: +20, budget: -5, samenwerking: +10 },
-    reactie: { naam: "Thijs Pleijhuis", org: "Klokgroep", icon: "building-2",
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
       tekst: "MPG als gunningscriterium is eerlijker dan directe biobased-eisen. We investeren nu in LCA-optimalisatie voor onze concepten. Biobased wint de aanbestedingen vanzelf — dat is de markt.", sentiment: "positief" },
     triggerEvent: null
   },
   g3d: {
     effecten: { politiek: +5, markt: +5, budget: -15, samenwerking: +15 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Een kostenonderzoek door HAN en TNO is een verstandige keuze. De data die dit oplevert is waardevol — niet alleen voor dit project, maar voor de hele regio. We ondersteunen dit vanuit HNN.", sentiment: "positief" },
     triggerEvent: null
   },
   g4d: {
     effecten: { politiek: +10, markt: +25, budget: -20, samenwerking: +15 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Dit is de meest transparante biobased prikkel die ik ooit heb gezien van een gemeente. We kunnen dit direct inprijzen in onze offertes. Klanten snappen het, wij snappen het — werkt.", sentiment: "positief" },
     triggerEvent: "coalitie_versnelling"
   },
@@ -338,25 +338,25 @@ const GAME_ROUND_ENRICHMENTS = {
   // ---- PROVINCIE extra (4e opties) ----
   p1d: {
     effecten: { politiek: +5, markt: +20, budget: -15, samenwerking: +20 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Duits aanbod van hout en vlas sloot precies het gat in onze inkoopketen. Dit is slim regionaal denken: de grens is geen belemmering als de keten het vraagt.", sentiment: "positief" },
     triggerEvent: null
   },
   p2d: {
     effecten: { politiek: +15, markt: +15, budget: -25, samenwerking: +20 },
-    reactie: { naam: "Maarten van Ginkel", org: "Gemeente Nijmegen", icon: "building-2",
+    reactie: { naam: "Gemeente", org: "Voorlopergemeente", icon: "building-2",
       tekst: "Als de provincie extra cofinanciering geeft bij HNN-adoptie, worden de gesprekken in de raad veel gemakkelijker. De kosten-batenanalyse is dan helder. Nijmegen was al in, maar dit helpt de kleinere gemeenten.", sentiment: "positief" },
     triggerEvent: null
   },
   p3d: {
     effecten: { politiek: +15, markt: +5, budget: -10, samenwerking: +25 },
-    reactie: { naam: "Melany Thijssen", org: "Talis Woningcorporatie", icon: "home",
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
       tekst: "Mediation klinkt soft maar het werkt. De weigeraars hadden concrete vragen die de provincie niet had beantwoord. Nu ze zijn gehoord, staan ze open. Draagvlak bouw je niet met verordeningen.", sentiment: "positief" },
     triggerEvent: null
   },
   p4d: {
     effecten: { politiek: +20, markt: +15, budget: -5, samenwerking: +15 },
-    reactie: { naam: "Thijs Pleijhuis", org: "Klokgroep", icon: "building-2",
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
       tekst: "De Omgevingsvisie geeft ons 10 jaar zekerheid. Wij kunnen nu langjarig investeren in biobased productiecapaciteit, wetend dat de vraag in de GMR structureel blijft. Dit is wat de markt nodig heeft.", sentiment: "positief" },
     triggerEvent: "coalitie_versnelling"
   },
@@ -364,51 +364,149 @@ const GAME_ROUND_ENRICHMENTS = {
   // ---- AANNEMER extra (4e opties) ----
   a1d: {
     effecten: { politiek: +5, markt: +10, budget: -15, samenwerking: +20 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "De samenwerking met HAN en TNO levert publieke kennis op die de hele sector ten goede komt. Provincie Gelderland wil dit meefinancieren via het HNN-tenderbudget.", sentiment: "positief" },
     triggerEvent: null
   },
   a2d: {
     effecten: { politiek: +15, markt: +15, budget: -10, samenwerking: +20 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Dit is precies wat HNN bedoeld heeft te bereiken: aannemers en provincie als partners in een pilotgebied. Drie projecten tegelijk — dat is de schaal die leren versnelt.", sentiment: "positief" },
     triggerEvent: null
   },
   a3d: {
     effecten: { politiek: +10, markt: +5, budget: -5, samenwerking: +20 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "Een sector-brede lobbybrief heeft meer impact dan individuele gesprekken. BZK reageert op collectieve signalen. Als BAM, Van Wijnen en Klokgroep samen vragen, kan het Rijk niet om ons heen.", sentiment: "positief" },
     triggerEvent: "media_doorbraak"
   },
   a4d: {
     effecten: { politiek: +5, markt: +20, budget: -15, samenwerking: +15 },
-    reactie: { naam: "Tom Stolker", org: "BAM Wonen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
       tekst: "Finse prefabfabrieken zijn 15 jaar verder dan wij. De studiereis bespaarde ons minimaal 2 jaar ontwikkelingstijd. Kennis importeren is sneller dan alles zelf uitvinden.", sentiment: "positief" },
     triggerEvent: null
+  },
+
+  // ---- BOUWBOER ----
+  b1a: {
+    effecten: { politiek: +5, markt: +15, budget: -10, samenwerking: +10 },
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
+      tekst: "Vezelhennep past perfect in de Nationale Aanpak Biobased Bouwen. Wij kunnen uw pilot ondersteunen via het HNN-tenderbudget. Precies de teeltstap waarop we zitten te wachten.", sentiment: "positief" },
+    triggerEvent: null
+  },
+  b1b: {
+    effecten: { politiek: 0, markt: +5, budget: -15, samenwerking: +5 },
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
+      tekst: "Miscanthus is interessant voor isolatie, maar de bouwvraag op schaal is er nog niet. Kom over drie jaar terug als u het bewijs heeft geleverd — dan staan we klaar.", sentiment: "neutraal" },
+    triggerEvent: null
+  },
+  b1c: {
+    effecten: { politiek: +5, markt: +10, budget: -5, samenwerking: +5 },
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
+      tekst: "Vlas is bewezen maar we hebben volume nodig. Schaal op naar 100 ton droge stof per jaar en dan komen we praten over een structureel afnamecontract.", sentiment: "neutraal" },
+    triggerEvent: null
+  },
+  b1d: {
+    effecten: { politiek: +5, markt: +12, budget: -8, samenwerking: +15 },
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
+      tekst: "Een lokale stroverwerker voor prefab isolatiepakketten — precies de keten die wij zoeken. Als de prijs klopt en kwaliteit geborgd is, zijn wij geïnteresseerd als afnemer.", sentiment: "positief" },
+    triggerEvent: null
+  },
+  b2a: {
+    effecten: { politiek: +5, markt: +15, budget: +10, samenwerking: +10 },
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
+      tekst: "Rechtstreeks inkopen bij de boer scheelt tussenpersonen en geeft u een eerlijkere prijs. Wij werken graag aan een meerjarenafnameovereenkomst — 3 jaar zekerheid voor beiden.", sentiment: "positief" },
+    triggerEvent: null
+  },
+  b2b: {
+    effecten: { politiek: +10, markt: +10, budget: -5, samenwerking: +20 },
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
+      tekst: "Een regionale boercoöperatie is sterker dan losse contracten. Als u 10+ boeren bundelt, bent u een serieuze gesprekspartner voor grote aannemers. Provincie Gelderland wil dit ondersteunen.", sentiment: "positief" },
+    triggerEvent: "corporatie_coalitie"
+  },
+  b2c: {
+    effecten: { politiek: 0, markt: +12, budget: 0, samenwerking: +8 },
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
+      tekst: "De verwerker als tussenstap maakt u minder kwetsbaar voor fluctuaties. Leg contractueel vast wat er met uw prijs gebeurt als de bouwvraag tijdelijk afneemt.", sentiment: "neutraal" },
+    triggerEvent: null
+  },
+  b2d: {
+    effecten: { politiek: +10, markt: +8, budget: +5, samenwerking: +20 },
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
+      tekst: "Als de corporatiecoalitie langjarig afneemt, kunnen wij plannen voor verwerkingscapaciteit. Dit is de stabiele vraag die de keten nodig heeft om te investeren.", sentiment: "positief" },
+    triggerEvent: null
+  },
+  b3a: {
+    effecten: { politiek: 0, markt: -10, budget: +5, samenwerking: -5 },
+    reactie: { naam: "Projectontwikkelaar", org: "Marktpartij", icon: "building-2",
+      tekst: "Dit is een tegenvaller voor de transitie. Noodafzet naar energie of compost verzwakt uw positie als biobased leverancier. Documenteer goed waarom dit uw businesscase niet ontkracht.", sentiment: "kritisch" },
+    triggerEvent: null
+  },
+  b3b: {
+    effecten: { politiek: +10, markt: +5, budget: +15, samenwerking: +10 },
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
+      tekst: "Uw aanvraag is een van de sterkste die we zagen: bestaand areaal, bewezen teelt en aansluiting op het HNN-raamwerk. Wij kunnen dit honoreren via het NABB-budget.", sentiment: "positief" },
+    triggerEvent: "RVO_subsidie"
+  },
+  b3c: {
+    effecten: { politiek: +5, markt: +15, budget: -10, samenwerking: +15 },
+    reactie: { naam: "Aannemer", org: "Biobased specialist", icon: "hard-hat",
+      tekst: "Drie boeren die samen een verwerkingspilot starten — dat is schaal. Koppel dit aan een gezamenlijk inkoopcontract en wij staan direct aan de tekentafel.", sentiment: "positief" },
+    triggerEvent: "coalitie_versnelling"
+  },
+  b3d: {
+    effecten: { politiek: +15, markt: +5, budget: 0, samenwerking: +10 },
+    reactie: { naam: "Gemeente", org: "Voorlopergemeente", icon: "building-2",
+      tekst: "Een convenant klinkt goed, maar onze afdeling grondbeleid moet dit juridisch toetsen. Wij zijn in principe bereid — maar een convenant zonder aannemer aan tafel is halfwerk.", sentiment: "neutraal" },
+    triggerEvent: null
+  },
+  b4a: {
+    effecten: { politiek: +15, markt: +20, budget: -20, samenwerking: +15 },
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
+      tekst: "Meefinancieren in regionale verwerking is de stap die de NABB nodig heeft. Provincie Gelderland wil cofinancieren. Dit is de investering die de hele keten ontkoppelt van import.", sentiment: "positief" },
+    triggerEvent: "RVO_subsidie"
+  },
+  b4b: {
+    effecten: { politiek: +10, markt: +15, budget: +20, samenwerking: +10 },
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
+      tekst: "Als uw teelt CO₂-vastlegging kan certificeren, versterkt dat ook onze businesscase als afnemer. Wij zijn bereid de certificeringskosten mee te financieren — dat maakt de keten sterker.", sentiment: "positief" },
+    triggerEvent: null
+  },
+  b4c: {
+    effecten: { politiek: +20, markt: +15, budget: -5, samenwerking: +25 },
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
+      tekst: "Een ketenconvenant met GMR, provincie en corporaties geeft ons als aannemer de zekerheid om langjarig in biobased bouwconcepten te investeren. Dit is het ontbrekende stuk in de transitie.", sentiment: "positief" },
+    triggerEvent: "corporatie_coalitie"
+  },
+  b4d: {
+    effecten: { politiek: +10, markt: +10, budget: -5, samenwerking: +20 },
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
+      tekst: "Kennisdelen via studieclubs versnelt de transitie. Wij ondersteunen dit via het HAN-partnerschap. Meer agrariërs moeten weten dat biobased teelt technisch én economisch kan werken.", sentiment: "positief" },
+    triggerEvent: "kennisdeling_effect"
   },
 
   // ---- CORPORATIE extra (4e opties) ----
   c1d: {
     effecten: { politiek: +5, markt: +10, budget: +25, samenwerking: +10 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Carbon credits als onderdeel van de businesscase — dit is de doorbraak die corporaties nodig hebben. Als u dit toepast, laat u zien dat biobased ook financieel verstandig is. Provincie wil dit als pilot ondersteunen.", sentiment: "positief" },
     triggerEvent: null
   },
   c2d: {
     effecten: { politiek: +5, markt: +5, budget: -10, samenwerking: +20 },
-    reactie: { naam: "Bart Triep", org: "Van Wijnen", icon: "hard-hat",
+    reactie: { naam: "Aannemer", org: "Seriebouw", icon: "hard-hat",
       tekst: "HAN-studenten die woonervaring documenteren — dat is goud. Wij kregen terugkoppeling over detailleringsfouten die we in het volgend project direct konden verbeteren. Meer bouwbedrijven zouden dit moeten willen.", sentiment: "positief" },
     triggerEvent: null
   },
   c3d: {
     effecten: { politiek: +15, markt: +15, budget: -5, samenwerking: +20 },
-    reactie: { naam: "Melany Thijssen", org: "Talis Woningcorporatie", icon: "home",
+    reactie: { naam: "Woningcorporatie", org: "Sociaal verhuurder", icon: "home",
       tekst: "Bewoners die zelf het verhaal vertellen zijn onbetaalbaar als communicatiemiddel. De open dag was beter dan elke marketingcampagne die we ooit gedaan hebben. Talis doet dit bij elk volgend project.", sentiment: "positief" },
     triggerEvent: "landelijke_media"
   },
   c4d: {
     effecten: { politiek: +15, markt: +10, budget: -10, samenwerking: +20 },
-    reactie: { naam: "Myriam van Zetten", org: "Provincie Gelderland", icon: "landmark",
+    reactie: { naam: "Provincie", org: "HNN-aansturing", icon: "landmark",
       tekst: "Uw publicatie via Aedes en Cirkelstad is de beste investering die u als corporatie kunt doen. Kennis delen versnelt de hele transitie. Provincie gebruikt het als standaardreferentie bij tenderregelingen.", sentiment: "positief" },
     triggerEvent: "kennisdeling_effect"
   }
@@ -703,6 +801,100 @@ const GAME_ROUNDS_DATA = {
       ]
     }
   ],
+  bouwboer: [
+    {
+      ronde: 1, fase: "Ronde 1 — Eerste teeltstap",
+      context: "Voorjaar 2026. U bewerkt 45 hectare in het Land van Maas en Waal. Graan- en maïsprijzen staan onder druk. U overweegt over te schakelen op biobased gewassen voor de bouwketen.",
+      vraag: "Welk gewas en welke teeltstrategie kiest u?",
+      opties: [
+        { id:"b1a", label:"Vezelhennep: 20 ha pilotteelt", icon:"sprout",
+          beschrijving:"Start met 20 hectare vezelhennep. Snelle opstart, groeiende vraag vanuit de houtbouw en isolatiemarkt. Provincie Gelderland heeft subsidie beschikbaar via NABB.",
+          gevolg:"U startte met vezelhennep: eerste oogst binnen 4 maanden. Drie aannemers melden interesse. De provincie wil uw pilot als showcase voor NABB gebruiken.",
+          scores:{adoptionScore:75,costScore:45,regulationScore:40} },
+        { id:"b1b", label:"Miscanthus: meerjarig energiegewas", icon:"trees",
+          beschrijving:"Miscanthus vraagt een investering van 3 jaar voor de eerste rendabele oogst, maar daarna zijn de kosten laag en het gewas ideaal voor isolatie en constructiehout.",
+          gevolg:"U koos de lange termijn: miscanthus groeit goed. Maar aannemers wachten op bewijs voordat ze afnemen. Uw marge staat 2 jaar onder druk.",
+          scores:{adoptionScore:45,costScore:55,regulationScore:30} },
+        { id:"b1c", label:"Vlas met bestaande loonwerkrelatie", icon:"wheat",
+          beschrijving:"Vlas is een bewezen gewas in de regio. Via uw loonwerker kunt u snel starten zonder grote investering. Marge is lager maar risico ook.",
+          gevolg:"U startte met vlas: lage drempel, eerste leveringen soepel. Maar afnemers vragen meer volume voordat ze een langjarig contract willen aangaan.",
+          scores:{adoptionScore:55,costScore:70,regulationScore:35} },
+        { id:"b1d", label:"Stro-isolatiepilot met lokale verwerker", icon:"package",
+          beschrijving:"Samenwerken met een lokale stroverwerker die stropellets en isolatiepakketten maakt voor prefab bouw. Kleinschalig maar direct aansluiting op de bouwketen.",
+          gevolg:"U koos samenwerking: de stroverwerker heeft al twee aannemers als klant. Uw stro wordt direct verwerkt tot isolatiepakketten voor woningbouw.",
+          scores:{adoptionScore:65,costScore:60,regulationScore:38} }
+      ]
+    },
+    {
+      ronde: 2, fase: "Ronde 2 — Afzet organiseren",
+      context: "Uw eerste oogst nadert. Zonder vaste afnemer staat u zwak in de onderhandeling. De prijs van biobased gewassen fluctueert sterk. Hoe organiseert u langjarige afzet?",
+      vraag: "Hoe regelt u een stabiele afzetstructuur?",
+      opties: [
+        { id:"b2a", label:"Rechtstreeks contract met aannemer", icon:"handshake",
+          beschrijving:"Een of twee aannemers direct benaderen voor een 3-jarig afnamecontract. Hogere prijs per ton, maar u bent afhankelijk van hun orderboek.",
+          gevolg:"U tekende rechtstreeks met een aannemer: hogere prijs maar u bent kwetsbaar als hun orderboek wijzigt. Eerste levering geslaagd.",
+          scores:{adoptionScore:70,costScore:72,regulationScore:30} },
+        { id:"b2b", label:"Coöperatie: bundel met 5 buurboerem", icon:"users",
+          beschrijving:"Samen met vijf buurboeren een regionale biobased teeltcoöperatie oprichten. Meer onderhandelingsmacht, betere logistiek en gemeenschappelijke marketing.",
+          gevolg:"U richtte een coöperatie op: zes boeren, 180 hectare gezamenlijk. Aannemers nemen u nu serieus als structurele leverancier.",
+          scores:{adoptionScore:65,costScore:55,regulationScore:42} },
+        { id:"b2c", label:"Contract met regionale verwerker", icon:"factory",
+          beschrijving:"Uw gewas verkopen aan een regionale verwerker die de biobased producten doorverkoopt aan bouwers. Zekerheid maar minder marge.",
+          gevolg:"U koos zekerheid: de verwerker neemt uw oogst af ongeacht de marktvraag. U verdient minder maar slaapt beter.",
+          scores:{adoptionScore:60,costScore:65,regulationScore:28} },
+        { id:"b2d", label:"GMR-corporatiecoalitie als langjarige afnemer", icon:"home",
+          beschrijving:"Via de GMR aansluiten bij de corporatiecoalitie die langjarige afnamecontracten biedt voor biobased materialen. Stabiel volume, stabiele prijs.",
+          gevolg:"U sloot aan bij de corporatiecoalitie: 5-jarig contract voor hennepvezel en stro-isolatie. Investeringszekerheid maakt uitbreiden mogelijk.",
+          scores:{adoptionScore:72,costScore:68,regulationScore:45} }
+      ]
+    },
+    {
+      ronde: 3, fase: "Ronde 3 — Tegenslag",
+      context: "Een grote aannemer trekt zijn intentieovereenkomst in: 'het volume is er nog niet'. Tegelijk geeft de hennepregelgeving vertraging. U dreigt uw seizoensinvestering te verliezen.",
+      vraag: "Hoe reageert u op het wegvallen van uw afnemer?",
+      opties: [
+        { id:"b3a", label:"Noodafzet via compost of energie", icon:"leaf",
+          beschrijving:"Uw oogst noodgedwongen verkopen als biomassa voor energieopwekking of als compost. Veel lagere prijs, maar uw investering gaat niet volledig verloren.",
+          gevolg:"U koos de nooduitweg: de oogst is verkocht maar voor een fractie van de biobased bouwprijs. De businesscase staat onder druk voor volgend jaar.",
+          scores:{adoptionScore:35,costScore:38,regulationScore:20} },
+        { id:"b3b", label:"NABB-subsidieaanvraag indienen", icon:"badge-euro",
+          beschrijving:"Een subsidieaanvraag indienen bij RVO via de Nationale Aanpak Biobased Bouwen. U heeft een sterk dossier: bewezen areaal, HNN-koppeling en regionale vraag.",
+          gevolg:"U koos subsidie als buffer: aanvraag gehonoreerd voor €45.000. Financiële druk verlicht, eerste oogst alsnog afgezet via provinciale pilot.",
+          scores:{adoptionScore:55,costScore:72,regulationScore:40} },
+        { id:"b3c", label:"Verwerkingspilot starten met drie buurboeren", icon:"users",
+          beschrijving:"Met drie buurboeren een gezamenlijke minimale verwerkingsinstallatie opzetten zodat u zelf halffabrikaten kunt leveren in plaats van ruwe vezels. Hogere marge, meer risico.",
+          gevolg:"U koos gezamenlijke actie: de pilot trekt aandacht van aannemers én de provincie. Nieuwe contracten worden gesloten nog voor de installatie klaar is.",
+          scores:{adoptionScore:72,costScore:55,regulationScore:38} },
+        { id:"b3d", label:"Gemeente benaderen voor structureel convenant", icon:"building-2",
+          beschrijving:"Rechtstreeks naar de gemeente stappen met een voorstel voor een regionale biobased leveringsafspraak als onderdeel van de woningbouwstrategie.",
+          gevolg:"U koos de beleidsroute: gemeente is geïnteresseerd maar vraagt ook aannemers aan tafel. Het traject duurt langer maar leidt tot een echt structureel convenant.",
+          scores:{adoptionScore:50,costScore:40,regulationScore:60} }
+      ]
+    },
+    {
+      ronde: 4, fase: "Ronde 4 — Structurele verankering",
+      context: "Twee succesvolle oogsten en een groeiend netwerk van afnemers. De markt trekt aan. Hoe verankert u uw positie duurzaam in de regionale biobased bouwketen?",
+      vraag: "Hoe zorgt u dat biobased teelt levensvatbaar blijft voor de lange termijn?",
+      opties: [
+        { id:"b4a", label:"Meefinancieren in regionaal verwerkingsbedrijf", icon:"factory",
+          beschrijving:"Samen met andere boeren en de provincie investeren in een regionale verwerkingsfaciliteit. U levert niet meer alleen ruwe vezels maar ook halffabrikaten.",
+          gevolg:"U investeerde in de keten: hogere marge per ton, meer zekerheid. De provincie cofinanciert. GMR beschouwt dit als strategische infrastructuur.",
+          scores:{adoptionScore:85,costScore:60,regulationScore:52} },
+        { id:"b4b", label:"CO₂-opslag certificeren via carbon credits", icon:"leaf",
+          beschrijving:"De biogene CO₂-opslag in uw hennep en vlas laten certificeren via het Climate Cleanup Protocol. Carbon credits als aanvullende inkomstenstroom bovenop de gewasopbrengst.",
+          gevolg:"U koos financiële innovatie: €1.200–2.400 extra per hectare via carbon credits. Corporaties zijn bereid de certificeringskosten mee te financieren.",
+          scores:{adoptionScore:68,costScore:88,regulationScore:45} },
+        { id:"b4c", label:"GMR-ketenconvenant ondertekenen", icon:"file-check",
+          beschrijving:"Deelnemen aan een formeel ketenconvenant met de GMR, provincie, aannemers en corporaties. Langjarige leveringsafspraken, prijszekerheid en gezamenlijke kennisdeling.",
+          gevolg:"U ondertekende het convenant: 7-jarige leveringszekerheid. Aannemers kunnen nu ook langjarig plannen. De regionale keten staat als een huis.",
+          scores:{adoptionScore:90,costScore:72,regulationScore:78} },
+        { id:"b4d", label:"Kennisplatform: lessen delen via studieclubs", icon:"graduation-cap",
+          beschrijving:"Uw ervaringen delen met andere agrariërs via regionale studieclubs, HAN-gastlessen en een openbare praktijkgids. U helpt de transitie verbreden.",
+          gevolg:"U koos open kennisdeling: acht boeren in de regio schakelen over. Uw praktijkgids wordt door de provincie als referentie gebruikt voor nieuwe NABB-projecten.",
+          scores:{adoptionScore:65,costScore:38,regulationScore:50} }
+      ]
+    }
+  ],
   corporatie: [
     {
       ronde: 1, fase: "Ronde 1 — Strategie bepalen",
@@ -810,7 +1002,7 @@ const GAME_SCENARIOS = [
     naam: "Systeemtransitie voltooid",
     icoon: "trophy",
     conditie: (v) => v.politiek >= 80 && v.markt >= 75 && v.samenwerking >= 75 && v.budget >= 45,
-    conclusie: "U heeft alle pijlers van de transitie in beweging gebracht: politiek draagvlak, marktopbouw, brede coalitie én financiële haalbaarheid. Dit is het HNN-model in de praktijk. De GMR-regio kan nu als nationaal voorloopgebied functioneren. BAM, Klokgroep en Van Wijnen zijn klaar voor opschaling. BZK gebruikt uw aanpak als blauwdruk voor nationale normering.",
+    conclusie: "U heeft alle pijlers van de transitie in beweging gebracht: politiek draagvlak, marktopbouw, brede coalitie én financiële haalbaarheid. Dit is het HNN-model in de praktijk. De GMR-regio kan nu als nationaal voorloopgebied functioneren. Aannemers, corporaties en bouwboeren zijn klaar voor opschaling. BZK gebruikt uw aanpak als blauwdruk voor nationale normering.",
     klasse: "positief",
     profiel: "Balanced leader"
   },
