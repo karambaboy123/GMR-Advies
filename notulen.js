@@ -29,6 +29,10 @@ const NotulenTab = (() => {
     const container = document.getElementById('notulen-content');
 
     container.innerHTML = `
+      <div class="notulen-disclaimer-banner">
+        <i data-lucide="info"></i>
+        <span>De weergegeven citaten zijn samenvattingen van gesprekken en niet altijd letterlijk woord-voor-woord weergegeven.</span>
+      </div>
       <div class="notulen-layout">
         <div class="notulen-questions-panel">
           <div class="panel-header">
@@ -204,11 +208,13 @@ const NotulenTab = (() => {
         e.preventDefault();
         const bestand = link.dataset.bestand;
         if (bestand) {
-          if (bestand.startsWith('http://') || bestand.startsWith('https://')) {
-            window.open(bestand, '_blank');
-          } else {
-            window.open(BASE_PATH + encodeURIComponent(bestand), '_blank');
-          }
+          const base = location.protocol === 'file:'
+            ? BASE_PATH
+            : 'https://raw.githubusercontent.com/karambaboy123/GMR-Advies/master/Biobased%20en%20Circulaire%20Bouw/';
+          const url = (bestand.startsWith('http://') || bestand.startsWith('https://'))
+            ? bestand
+            : base + encodeURIComponent(bestand);
+          window.open(url, '_blank');
         }
       }
     });

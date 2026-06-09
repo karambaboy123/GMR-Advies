@@ -4,7 +4,7 @@
 // GMR Groene Metropoolregio Arnhem-Nijmegen
 // ============================================================
 
-const GMRPrint = (() => {
+window.GMRPrint = (() => {
 
   function today() {
     return new Date().toLocaleDateString('nl-NL', {
@@ -524,7 +524,10 @@ const GMRPrint = (() => {
         <div class="prt-outcome-card"><span class="prt-outcome-value">${outcomes.co2_ton.toLocaleString('nl-NL')}</span>ton CO₂-opslag / jaar</div>
         <div class="prt-outcome-card"><span class="prt-outcome-value">${outcomes.marktgroei}%</span>marktaandeel biobased</div>
         <div class="prt-outcome-card"><span class="prt-outcome-value">€${outcomes.investering} mln</span>private investering</div>
-      </div>` : '';
+      </div>
+      <p style="font-size:10px;color:#999;margin-top:6px">
+        Prognoses zijn gebaseerd op simulatiemodel. Referentiecijfers: CBS Bouwstatistieken &amp; NABB 2023.
+      </p>` : '';
 
     triggerPrint(`
       <div class="prt-body">

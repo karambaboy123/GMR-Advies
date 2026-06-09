@@ -39,7 +39,15 @@ const TrendsTab = (() => {
       if (link) {
         e.preventDefault();
         const b = link.dataset.bestand;
-        if (b) window.open(BASE_PATH + encodeURIComponent(b), '_blank');
+        if (b) {
+          const base = location.protocol === 'file:'
+            ? BASE_PATH
+            : 'https://raw.githubusercontent.com/karambaboy123/GMR-Advies/master/Biobased%20en%20Circulaire%20Bouw/';
+          const url = (b.startsWith('http://') || b.startsWith('https://'))
+            ? b
+            : base + encodeURIComponent(b);
+          window.open(url, '_blank');
+        }
       }
     });
 

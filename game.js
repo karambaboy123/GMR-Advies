@@ -135,6 +135,53 @@ const GameTab = (() => {
   }
 
   // ----------------------------------------------------------
+  // AFKORTING TOOLTIPS
+  // ----------------------------------------------------------
+  const ABBR_MAP = {
+    'HNN':    'Het Nieuwe Normaal — circulaire normering voor nieuwbouw en infra',
+    'MPG':    'MilieuPrestatie Gebouwen — wettelijke milieuscore per m² BVO',
+    'NABB':   'Nationale Aanpak Biobased Bouwen — Rijksprogramma 2023',
+    'GMR':    'Groene Metropoolregio Arnhem-Nijmegen',
+    'BZK':    'Ministerie van Binnenlandse Zaken en Koninkrijksrelaties',
+    'IenW':   'Ministerie van Infrastructuur en Waterstaat',
+    'EPBD':   'Energy Performance of Buildings Directive — Europese energierichtlijn',
+    'NEPROM': 'Vereniging van Nederlandse Projectontwikkelingsmaatschappijen',
+    'CPR':    'Construction Products Regulation — Europese bouwproductenverordening',
+    'CSRD':   'Corporate Sustainability Reporting Directive',
+    'HSB':    'Houtskeletbouw — bouwen met houten draagstructuur',
+    'CLT':    'Cross Laminated Timber — massief kruislings verlijmd hout',
+    'WKO':    'Warmte-Koude Opslag — energieopslagsysteem in de bodem',
+  };
+
+  function wrapAbbrs(container) {
+    if (!container) return;
+    const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+    const nodes = [];
+    let node;
+    while ((node = walker.nextNode())) {
+      const tag = node.parentElement ? node.parentElement.tagName : '';
+      if (tag !== 'ABBR' && tag !== 'SCRIPT' && tag !== 'STYLE' && tag !== 'TEXTAREA') {
+        nodes.push(node);
+      }
+    }
+    nodes.forEach(textNode => {
+      let text = textNode.textContent;
+      let changed = false;
+      Object.entries(ABBR_MAP).forEach(([abbr, title]) => {
+        if (!text.includes(abbr)) return;
+        const re = new RegExp('\\b' + abbr + '\\b', 'g');
+        const replaced = text.replace(re, `<abbr title="${title}">${abbr}</abbr>`);
+        if (replaced !== text) { text = replaced; changed = true; }
+      });
+      if (changed) {
+        const span = document.createElement('span');
+        span.innerHTML = text;
+        textNode.parentNode.replaceChild(span, textNode);
+      }
+    });
+  }
+
+  // ----------------------------------------------------------
   // RENDER MAIN
   // ----------------------------------------------------------
   function render() {
@@ -152,6 +199,7 @@ const GameTab = (() => {
     </div>`;
     attachEvents();
     onRefreshIcons(container);
+    wrapAbbrs(container);
   }
 
   // ----------------------------------------------------------
@@ -572,6 +620,10 @@ const GameTab = (() => {
             <div class="outcome-value">${'★'.repeat(outcomes.politiekeSteun)}${'☆'.repeat(5 - outcomes.politiekeSteun)}</div>
             <div class="outcome-label">politieke steun (5 sterren)</div>
           </div>
+        </div>
+        <div class="outcomes-bron-note">
+          <i data-lucide="info" style="width:11px;height:11px;flex-shrink:0"></i>
+          Prognoses zijn gebaseerd op simulatiemodel. Referentiecijfers: CBS Bouwstatistieken &amp; NABB 2023.
         </div>
 
         <!-- Netwerk visualisatie -->

@@ -524,6 +524,16 @@ const DeskresearchTab = (() => {
   let zoekterm = '';
   let onRefreshIcons;
 
+  // ── DOC URL RESOLVER ─────────────────────────────────────
+  function docUrl(bestand) {
+    if (!bestand) return '#';
+    if (bestand.startsWith('http://') || bestand.startsWith('https://')) return bestand;
+    const base = location.protocol === 'file:'
+      ? BASE_PATH
+      : 'https://raw.githubusercontent.com/karambaboy123/GMR-Advies/master/Biobased%20en%20Circulaire%20Bouw/';
+    return base + encodeURIComponent(bestand);
+  }
+
   // ── RENDER ────────────────────────────────────────────────
   function render() {
     const container = document.getElementById('deskresearch-content');
@@ -540,7 +550,6 @@ const DeskresearchTab = (() => {
     });
 
     container.innerHTML = `
-      ${alertBanner()}
       ${filterBarHTML()}
       ${Object.keys(grouped).length === 0
         ? `<div class="empty-state"><i data-lucide="search-x"></i><p>Geen documenten gevonden voor "<strong>${zoekterm}</strong>".</p></div>`
@@ -568,22 +577,13 @@ const DeskresearchTab = (() => {
 
     container.querySelectorAll('.doc-open-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const bestand = btn.dataset.bestand;
-        const url = BASE_PATH + encodeURIComponent(bestand);
-        window.open(url, '_blank');
+        window.open(docUrl(btn.dataset.bestand), '_blank');
       });
     });
 
     onRefreshIcons();
   }
 
-  // ── ALERT BANNER ─────────────────────────────────────────
-  function alertBanner() {
-    return `<div class="dr-alert">
-      <i data-lucide="info"></i>
-      <span>Documenten openen in een nieuw tabblad. <strong>Gebruik Microsoft Edge of Firefox</strong> voor directe toegang tot lokale bestanden. In Chrome: ga naar <code>chrome://flags/#allow-file-access-from-files</code> en schakel de optie in.</span>
-    </div>`;
-  }
 
   // ── FILTER BAR ────────────────────────────────────────────
   function filterBarHTML() {
