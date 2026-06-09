@@ -166,13 +166,14 @@ const AdviesrapportTab = (() => {
     const container = document.getElementById('adviesrapport-content');
     container.innerHTML = buildHTML();
 
-    // Download DOCX knoppen
+    // PDF download knoppen — via GMRPrint net zoals andere tabs
     container.querySelectorAll('.js-advies-download').forEach(btn => {
       btn.addEventListener('click', () => {
-        const base = location.protocol === 'file:'
-          ? 'file:///C:/Users/karam/Desktop/GMR%20Advies/'
-          : 'https://raw.githubusercontent.com/karambaboy123/GMR-Advies/master/';
-        window.open(base + 'GMR_Adviesrapport_2026.docx', '_blank');
+        if (window.GMRPrint) {
+          GMRPrint.printAdviesrapport();
+        } else {
+          console.warn('GMRPrint niet beschikbaar');
+        }
       });
     });
 
@@ -194,7 +195,7 @@ const AdviesrapportTab = (() => {
         <p class="advies-hero-sub">Karam Rihmani &amp; Berend Dirken &nbsp;·&nbsp; Minor Duurzaam Ondernemen &amp; Circulaire Economie &nbsp;·&nbsp; HAN</p>
         <div class="advies-hero-btns">
           <button class="download-btn js-advies-download" style="background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.4);color:#fff">
-            <i data-lucide="download"></i> Download adviesrapport (DOCX)
+            <i data-lucide="download"></i> Download adviesrapport (PDF)
           </button>
         </div>
       </div>
@@ -360,7 +361,7 @@ const AdviesrapportTab = (() => {
         <div class="advies-footer-inner">
           <span>Karam Rihmani &amp; Berend Dirken &nbsp;·&nbsp; HAN Minor Duurzaam Ondernemen &amp; Circulaire Economie &nbsp;·&nbsp; Juni 2026</span>
           <button class="download-btn js-advies-download">
-            <i data-lucide="download"></i> Download adviesrapport (DOCX)
+            <i data-lucide="download"></i> Download adviesrapport (PDF)
           </button>
         </div>
       </div>
